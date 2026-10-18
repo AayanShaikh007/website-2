@@ -47,3 +47,6 @@ Edit src/data/life.ts to add years and dated entries with a title, paragraphs, a
 - Contact lists school/work and personal addresses separately.
 - Git initialized locally on codex/portfolio-v2 with the same author identity used in webnew. Earlier files were checkpointed individually at the current time. No historical dates were reconstructed and no remote push was performed. Future changes should follow AGENTS.md and use small frequent commits.
 - Validation: Astro check and production build pass; 18 pages generated.
+
+
+Owner clarification: use Stealth Startup as the public organization label; Guelph work concerns strawberry-picking robots; IEEE project leadership covers PCB, computer vision, and MATLAB. LinkedIn is https://www.linkedin.com/in/as770/. Automated LinkedIn retrieval returned HTTP 999, so no additional profile claims were inferred.
