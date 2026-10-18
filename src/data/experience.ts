@@ -8,7 +8,9 @@ export interface Experience {
 }
 // Personal responsibilities are sourced from the owner's local resume files.
 // Robotics start dates conflict between resume versions, so are omitted pending confirmation.
-export const experience: Experience[] = [];
+export const experience: Experience[] = [
+ {organization:'Stealth Startup',role:'Engineering',location:'',tags:[]},
+];
 export const education = {
  institution: 'University of Guelph',
  degree: 'Bachelor of Engineering, Computer Engineering (Co-op)',
