@@ -1,0 +1,84 @@
+---
+import '../styles/global.css';
+interface Props { title?: string; description?: string }
+const {title='Aayan Shaikh — Computer Engineering',description='Computer Engineering student at the University of Guelph. Embedded systems, custom hardware, and software.'}=Astro.props;
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content={description}/><meta name="theme-color" content="#050505"/><title>{title}</title><link rel="icon" href="/favicon.svg"/></head><body><a class="skip" href="#main">Skip to content</a><header class="nav"><a class="brand" href="/">Aayan Shaikh</a><nav aria-label="Main navigation"><a href="/#projects">Work</a><a href="/#about">About</a><a href="/life/">Life</a><a href="/resume/">Resume</a></nav></header><main id="main"><slot/></main><footer class="footer"><div><p>Computer Engineering<br/>University of Guelph</p><span>© {new Date().getFullYear()} Aayan Shaikh</span></div><div class="footer-links"><a href="https://www.linkedin.com/in/aayan-shaikh-902046266/">LinkedIn</a><a href="https://github.com/AayanShaikh007">GitHub</a><a href="mailto:ashaik28@uoguelph.ca">Email</a></div><div class="footer-links"><a href="/#about">About</a><a href="/#projects">Work</a><a href="/#experience">Experience</a><a href="/life/">Life</a><a href="/resume/">Resume</a></div></footer>
+<script>
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+const mm=gsap.matchMedia();
+mm.add('(prefers-reduced-motion: no-preference)',()=>{
+ // Keep the original text accessible while only its visual copy streams in.
+ const originals: {element: HTMLElement; html: string}[] = [];
+ const characters: HTMLElement[] = [];
+ document.querySelectorAll<HTMLElement>('.intro h1, .intro p').forEach(element => {
+  const text = element.textContent ?? '';
+  originals.push({element, html: element.innerHTML});
+  const accessible = document.createElement('span');
+  accessible.className = 'sr-only';
+  accessible.textContent = text;
+  const visual = document.createElement('span');
+  visual.setAttribute('aria-hidden', 'true');
+  for (const token of text.split(/(\s+)/)) {
+   if (/^\s+$/.test(token)) { visual.append(document.createTextNode(token)); continue; }
+   const word = document.createElement('span');
+   word.className = 'typing-word';
+   for (const character of Array.from(token)) {
+    const span = document.createElement('span');
+    span.textContent = character;
+    word.append(span);
+    characters.push(span);
+   }
+   visual.append(word);
+  }
+  element.replaceChildren(accessible, visual);
+ });
+ gsap.fromTo(characters, {opacity:0}, {opacity:1,duration:.22,stagger:.024,delay:.2,ease:'power1.out'});
+ gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach(el=>gsap.from(el,{scrollTrigger:{trigger:el,start:'top 97%',once:true},y:16,opacity:0,duration:.65,ease:'power2.out',clearProps:'all'}));
+ return () => originals.forEach(({element,html}) => { element.innerHTML = html; });
+});
+// Throw the photos from the header; power4.out gives a quick launch and long friction-like stop.
+mm.add('(prefers-reduced-motion: no-preference)',()=>{
+ const brand=document.querySelector<HTMLElement>('.brand');
+ if(!brand)return;
+ const origin=brand.getBoundingClientRect();
+ gsap.utils.toArray<HTMLElement>('[data-float]').forEach((photo,i)=>{
+  const target=photo.getBoundingClientRect();
+  const rotation=parseFloat(photo.style.getPropertyValue('--angle'))||0;
+  gsap.fromTo(photo,{
+   x:origin.left+origin.width/2-(target.left+target.width/2),
+   y:origin.top+origin.height/2-(target.top+target.height/2),
+   rotation:rotation+(i%2?45:-55),scale:.62,opacity:0
+  },{x:0,y:0,rotation,scale:1,opacity:1,duration:2.1+i*.08,delay:.08+i*.045,ease:'power4.out',clearProps:'transform,opacity'});
+ });
+});
+// Progressive disclosure stays usable without JavaScript: all projects are visible by default.
+const projectCards=Array.from(document.querySelectorAll<HTMLElement>('[data-project-index]'));
+const showMore=document.querySelector<HTMLButtonElement>('.show-more');
+const mobile=window.matchMedia('(max-width: 767px)');
+let visibleCount=mobile.matches?4:8;
+const updateCards=()=>{
+ projectCards.forEach((card,index)=>{card.hidden=index>=visibleCount;});
+ if(showMore)showMore.hidden=visibleCount>=projectCards.length;
+ ScrollTrigger.refresh();
+};
+if(showMore&&projectCards.length){
+ updateCards();
+ mobile.addEventListener('change',()=>{visibleCount=Math.max(visibleCount,mobile.matches?4:8);updateCards();});
+ showMore.addEventListener('click',()=>{
+  const previous=visibleCount;
+  visibleCount=Math.min(projectCards.length,visibleCount+(mobile.matches?4:8));
+  updateCards();
+  const added=projectCards.slice(previous,visibleCount);
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+   gsap.fromTo(added,{opacity:0,y:18},{opacity:1,y:0,duration:.65,stagger:.07,ease:'power2.out',clearProps:'all',onComplete:()=>ScrollTrigger.refresh()});
+  }
+  // Keep focus in the newly revealed work when the final button disappears.
+  added[0]?.querySelector<HTMLAnchorElement>('a')?.focus({preventScroll:true});
+  const status=document.getElementById('project-status');
+  if(status)status.textContent=visibleCount+' of '+projectCards.length+' projects shown.';
+ });
+}
+</script></body></html>
