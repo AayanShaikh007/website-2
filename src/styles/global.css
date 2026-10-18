@@ -22,3 +22,4 @@
 
 .project-source{display:block;width:fit-content;margin-top:18px}.project-image-pending{padding:28px 0;border-block:1px solid #222}
 
+.experience-details{max-width:650px}.experience-details>h2{margin-bottom:30px}.role-entry{padding:28px 0 35px;border-top:1px solid #262626}.role-meta{display:flex;justify-content:space-between;gap:20px;color:#999;font-size:11px;margin-bottom:17px}.role-entry h3{font-size:22px;font-weight:450;letter-spacing:-.03em;margin-bottom:8px}.role-entry .role-title{color:#ddd;font-size:14px;margin-bottom:17px}.role-entry .role-description{font-size:14px;line-height:1.7;color:#aaa}.role-tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:18px 0 0}.role-tags li{font-size:11px;color:#aaa;background:#151515;padding:6px 10px;border-radius:4px}@media(max-width:600px){.role-meta{flex-direction:column;gap:5px}.role-entry h3{font-size:20px}}
