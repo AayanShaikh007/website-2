@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import {projects} from '../data/projects';
+import {experience,education} from '../data/experience';
 const cards = projects.map(p=>({...p,href:`/projects/${p.slug}/`}));
 ---
 <Layout>
@@ -10,7 +11,8 @@ const cards = projects.map(p=>({...p,href:`/projects/${p.slug}/`}));
 </section>
 <section id="projects" class="work-grid-section wrap" aria-label="Selected projects"><div class="project-grid" id="project-grid">{cards.map((p,i)=><article class="project" data-project-index={i}><a href={p.href} aria-label={`View ${p.title}`}><div class="project-art"><img src={p.image} alt={p.alt} width="480" height="500" loading="lazy" style={`--angle:${[-3,3,-2,2][i%4]}deg`}/></div><div class="card-caption"><h2>{p.title}</h2><span>{p.category}</span></div></a></article>)}</div><div class="work-more"><button class="button show-more" type="button" aria-controls="project-grid" hidden>Show more projects</button><p class="sr-only" role="status" id="project-status"></p><a class="button" href="https://github.com/AayanShaikh007">More on GitHub</a></div></section>
 <section id="about" class="text-section" data-reveal><h2>About</h2><p>I’m studying Computer Engineering (Co-op) at the University of Guelph. My projects range from keyboards and flight-sim controls to IoT monitoring and embedded control systems.</p><p>I enjoy working with Linux, designing hardware, and figuring out how things work.</p><a class="button" href="/resume/">Resume</a></section>
-<section id="experience" class="text-section experience" data-reveal><h2>Experience & education</h2><dl><div><dt>Stealth Startup</dt><dd>Engineering</dd></div><div><dt>University of Guelph</dt><dd>Robotics research</dd></div><div><dt>IEEE</dt><dd>PCB design</dd></div><div><dt>University of Guelph</dt><dd>Computer Engineering (Co-op)</dd></div></dl></section>
+<section id="experience" class="text-section experience-details"><h2>Experience</h2>{experience.map(job=><article class="role-entry" data-reveal><div class="role-meta"><span>{job.location}</span>{job.dates&&<span>{job.dates}</span>}</div><h3>{job.organization}</h3><p class="role-title">{job.role}</p>{job.description&&<p class="role-description">{job.description}</p>}{job.tags.length>0&&<ul class="role-tags">{job.tags.map(tag=><li>{tag}</li>)}</ul>}</article>)}</section>
+<section id="education" class="text-section experience-details"><h2>Education</h2><article class="role-entry" data-reveal><div class="role-meta"><span>{education.location}</span><span>{education.dates}</span></div><h3>{education.institution}</h3><p class="role-title">{education.degree}</p><p class="role-description">Coursework includes {education.coursework.join(', ').toLowerCase()}.</p></article></section>
 <section id="life" class="text-section" data-reveal><h2>Life</h2><p>A journal of what I’ve been up to, year by year.</p><a class="button" href="/life/">Read the journal</a></section>
 <section id="contact" class="text-section contact" data-reveal><h2>Contact</h2><div class="contact-address"><p>School & work</p><a class="contact-email" href="mailto:ashaik28@uoguelph.ca">ashaik28@uoguelph.ca ↗</a></div><div class="contact-address"><p>Personal</p><a class="contact-email" href="mailto:aayanshaikh770@gmail.com">aayanshaikh770@gmail.com ↗</a></div></section>
 </Layout>
