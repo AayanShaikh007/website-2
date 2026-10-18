@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {projects} from '../data/projects';
+const cards = projects.map(p=>({...p,href:`/projects/${p.slug}/`}));
+---
+<Layout>
+<section class="intro-stage" aria-labelledby="intro-title">
+ <div class="floating-images" aria-hidden="true">{cards.slice(0,8).map((p,i)=><div class={`float-card float-${i}`} data-float style={`--angle:${[-12,10,-9,8,12,-7,6,-8][i]}deg`}><img src={p.image} alt="" width="240" height="260" loading={i<2?'eager':'lazy'}/></div>)}</div>
+ <div class="intro" data-hero><h1 id="intro-title">I’m Aayan Shaikh — a Computer Engineering student at the University of Guelph. I work on embedded systems, custom hardware, and software.</h1><p>I like building things from scratch.</p></div>
+</section>
+<section id="projects" class="work-grid-section wrap" aria-label="Selected projects"><div class="project-grid" id="project-grid">{cards.map((p,i)=><article class="project" data-project-index={i}><a href={p.href} aria-label={`View ${p.title}`}><div class="project-art"><img src={p.image} alt={p.alt} width="480" height="500" loading="lazy" style={`--angle:${[-3,3,-2,2][i%4]}deg`}/></div><div class="card-caption"><h2>{p.title}</h2><span>{p.category}</span></div></a></article>)}</div><div class="work-more"><button class="button show-more" type="button" aria-controls="project-grid" hidden>Show more projects</button><p class="sr-only" role="status" id="project-status"></p><a class="button" href="https://github.com/AayanShaikh007">More on GitHub</a></div></section>
+<section id="about" class="text-section" data-reveal><h2>About</h2><p>I’m studying Computer Engineering (Co-op) at the University of Guelph. My projects range from keyboards and flight-sim controls to IoT monitoring and embedded control systems.</p><p>I enjoy working with Linux, designing hardware, and figuring out how things work.</p><a class="button" href="/resume/">Resume</a></section>
+<section id="experience" class="text-section experience" data-reveal><h2>Experience & education</h2><dl><div><dt>Stealth Startup</dt><dd>Engineering</dd></div><div><dt>University of Guelph</dt><dd>Robotics research</dd></div><div><dt>IEEE</dt><dd>PCB design</dd></div><div><dt>University of Guelph</dt><dd>Computer Engineering (Co-op)</dd></div></dl></section>
+<section id="life" class="text-section" data-reveal><h2>Life</h2><p>A journal of what I’ve been up to, year by year.</p><a class="button" href="/life/">Read the journal</a></section>
+<section id="contact" class="text-section contact" data-reveal><h2>Contact</h2><a class="contact-email" href="mailto:ashaik28@uoguelph.ca">ashaik28@uoguelph.ca ↗</a><p>For projects, co-op opportunities, or just to say hello.</p></section>
+</Layout>
