@@ -9,6 +9,7 @@ export interface Experience {
 // Personal responsibilities are sourced from the owner's local resume files.
 // Robotics start dates conflict between resume versions, so are omitted pending confirmation.
 export const experience: Experience[] = [
+ {organization:'University of Guelph',role:'Robotics Research Assistant',location:'Guelph, Ontario',description:'Programmed robotic arms on QNX for real-time motion control. Used MATLAB to simulate algorithms and analyze test results, and worked on sensor and vision integration for autonomous operation.',tags:['QNX','Robotics','MATLAB','Sensors']},
  {organization:'Stealth Startup',role:'Engineering',location:'',tags:[]},
 ];
 export const education = {
