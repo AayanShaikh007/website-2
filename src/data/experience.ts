@@ -10,7 +10,7 @@ export interface Experience {
 // Robotics start dates conflict between resume versions, so are omitted pending confirmation.
 export const experience: Experience[] = [
  {organization:'University of Guelph',role:'Robotics Research Assistant',location:'Guelph, Ontario',description:'Working on strawberry-picking robots at the University of Guelph. My research work includes robotic-arm motion control on QNX, MATLAB simulation and test analysis, and integrating sensor and vision inputs for autonomous operation.',tags:['QNX','Robotics','MATLAB','Sensors']},
- {organization:'U of G IEEE Student Branch',role:'Technical Projects Lead',location:'Guelph, Ontario',dates:'September 2025 — present',description:'Designed PCBs for club workshops and helped attendees with KiCad, soldering, and troubleshooting. Developed and maintained the club website with React and JavaScript for event information and resources.',tags:['KiCad','PCB design','React','JavaScript','Workshops']},
+ {organization:'U of G IEEE Student Branch',role:'Technical Projects Lead',location:'Guelph, Ontario',dates:'September 2025 — present',description:'Leading technical projects across PCB design, computer vision, and MATLAB at the University of Guelph IEEE Student Branch. I design boards for workshops, help attendees with KiCad, soldering, and troubleshooting, and maintain the club website with React and JavaScript.',tags:['Project leadership','PCB design','Computer vision','MATLAB','KiCad','React']},
  {organization:'Stealth Startup',role:'Engineering',location:'',tags:[]},
 ];
 export const education = {
