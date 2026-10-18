@@ -3,7 +3,7 @@ import '../styles/global.css';
 interface Props { title?: string; description?: string }
 const {title='Aayan Shaikh — Computer Engineering',description='Computer Engineering student at the University of Guelph. Embedded systems, custom hardware, and software.'}=Astro.props;
 ---
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content={description}/><meta name="theme-color" content="#050505"/><title>{title}</title><link rel="icon" href="/favicon.svg"/></head><body><a class="skip" href="#main">Skip to content</a><header class="nav"><a class="brand" href="/">Aayan Shaikh</a><nav aria-label="Main navigation"><a href="/#projects">Work</a><a href="/#about">About</a><a href="/life/">Life</a><a href="/resume/">Resume</a></nav></header><main id="main"><slot/></main><footer class="footer"><div><p>Computer Engineering<br/>University of Guelph</p><span>© {new Date().getFullYear()} Aayan Shaikh</span></div><div class="footer-links"><a href="https://www.linkedin.com/in/aayan-shaikh-902046266/">LinkedIn</a><a href="https://github.com/AayanShaikh007">GitHub</a><a href="mailto:ashaik28@uoguelph.ca">Email</a></div><div class="footer-links"><a href="/#about">About</a><a href="/#projects">Work</a><a href="/#experience">Experience</a><a href="/life/">Life</a><a href="/resume/">Resume</a></div></footer>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content={description}/><meta name="theme-color" content="#050505"/><title>{title}</title><link rel="icon" href="/favicon.svg"/></head><body><a class="skip" href="#main">Skip to content</a><header class="nav"><a class="brand" href="/">Aayan Shaikh</a><nav aria-label="Main navigation"><a href="/#projects">Work</a><a href="/#about">About</a><a href="/life/">Life</a><a href="/resume/">Resume</a></nav></header><main id="main"><slot/></main><footer class="footer"><div><p>Computer Engineering<br/>University of Guelph</p><span>© {new Date().getFullYear()} Aayan Shaikh</span></div><div class="footer-links"><a href="https://www.linkedin.com/in/as770/">LinkedIn</a><a href="https://github.com/AayanShaikh007">GitHub</a><a href="mailto:ashaik28@uoguelph.ca">Email</a></div><div class="footer-links"><a href="/#about">About</a><a href="/#projects">Work</a><a href="/#experience">Experience</a><a href="/life/">Life</a><a href="/resume/">Resume</a></div></footer>
 <script>
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -82,3 +82,4 @@ if(showMore&&projectCards.length){
  });
 }
 </script></body></html>
+
