@@ -1,5 +1,39 @@
-// Descriptions and images imported from C:/coding/webnew.
+// Project descriptions: old portfolio, Devpost, and linked repositories.
 export const projects = [
+  {
+    "slug": "karen",
+    "title": "K.A.R.E.N",
+    "category": "FPGA · AI",
+    "summary": "An FPGA assistant with voice interaction, Breakout, and a screensaver.",
+    "paragraphs": [
+      "An FPGA assistant with voice interaction, Breakout, and a screensaver.",
+      "Built as a team at uOttaHack 8. A Python controller links speech and keyboard input with Gemini, voice output, and commands for the FPGA.",
+      "SystemVerilog handles display timing, graphics, and mode changes. The project explores the boundary between flexible AI responses and deterministic hardware."
+    ],
+    "repo": "https://github.com/YimingH34/uottahack-8-karen",
+    "source": "https://devpost.com/software/karen-5g01yk",
+    "profileOnly": false,
+    "image": "/images/projects/karen/cover.svg",
+    "alt": "K.A.R.E.N — text cover, project photographs to be added",
+    "gallery": []
+  },
+  {
+    "slug": "campus-event-booking",
+    "title": "Campus Event Booking",
+    "category": "Java · JavaFX",
+    "summary": "A collaborative ENGG1420 project for campus users, events, and bookings.",
+    "paragraphs": [
+      "A collaborative ENGG1420 project for campus users, events, and bookings.",
+      "A Java application with a JavaFX interface for creating users, managing workshops, seminars and concerts, and handling registrations.",
+      "Bookings support cancellation and a queue-based waitlist, with automatic promotion when a place opens. The repository includes Maven setup and JUnit tests."
+    ],
+    "repo": "https://github.com/AayanShaikh007/1420_final",
+    "source": "https://github.com/AayanShaikh007/1420_final",
+    "profileOnly": false,
+    "image": "/images/projects/campus-event-booking/cover.svg",
+    "alt": "Campus Event Booking — text cover, project photographs to be added",
+    "gallery": []
+  },
   {
     "slug": "alertcore",
     "title": "AlertCore",
