@@ -38,3 +38,12 @@ Uses locally bundled Geist Variable from Fontsource. All six cards open local de
 
 ## Life journal
 Edit src/data/life.ts to add years and dated entries with a title, paragraphs, and optional image. Years and entries sort newest first. The Life page and homepage link are ready; 2026 and 2025 are empty until personal updates are supplied.
+
+## October 18 additions
+
+- K.A.R.E.N: https://devpost.com/software/karen-5g01yk and the linked https://github.com/YimingH34/uottahack-8-karen. Team work is described without inventing individual responsibility. Cover is labelled as awaiting images.
+- Campus Event Booking: https://github.com/AayanShaikh007/1420_final. Collaborative Java/JavaFX course project; screenshots remain to be supplied.
+- Experience and education: src/data/experience.ts, based on local hardware and software resume sources in C:/coding/1resumes. Robotics dates conflict between those versions and are intentionally omitted. Stealth Startup still needs a title, dates, and responsibilities from the owner. Unnecessary quantitative resume claims were omitted.
+- Contact lists school/work and personal addresses separately.
+- Git initialized locally on codex/portfolio-v2 with the same author identity used in webnew. Earlier files were checkpointed individually at the current time. No historical dates were reconstructed and no remote push was performed. Future changes should follow AGENTS.md and use small frequent commits.
+- Validation: Astro check and production build pass; 18 pages generated.
