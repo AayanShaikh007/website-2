@@ -1,0 +1,40 @@
+# Aayan Shaikh — Portfolio V2
+
+Local static portfolio built with Astro 7, Tailwind CSS 4, and GSAP ScrollTrigger. Node 22.19+ recommended (a transitive dependency requires it).
+
+```powershell
+cd C:\coding\website2
+npm install
+npm run dev
+```
+
+Visit http://127.0.0.1:4321. `npm run check` checks Astro and TypeScript; `npm run build` generates `dist/`; `npm run preview` serves the production output.
+
+## Content
+
+Edit `src/data/projects.ts` for project text, metadata, and image references. Homepage experience and contact information live in `src/pages/index.astro`. The reusable layout includes navigation, metadata, and motion. Styles live in `src/styles/global.css` and use Tailwind's Vite integration.
+
+Project descriptions and downloaded images come from https://aayanshaikh.vercel.app/projects. Contact information comes from its contact page. These are owner-published source claims, not independently verified results. Quantitative improvement claims were omitted. Reference composition: https://www.abbassyed.ca/; no assets or copy from that site were reused.
+
+## Before publishing
+
+- Confirm Stealth Startup role, responsibilities, dates, and University of Guelph robotics research details. These entries are deliberately brief because the supplied request names them but supporting details were unavailable.
+- Add a current resume PDF to `public/` and update the resume page and navigation link if direct downloads are desired. The current resume page provides a working email request link, matching the old portfolio's approach.
+- Replace the explicitly labelled additional-documentation placeholders on case-study pages with genuine assets. Existing cover images are real assets from the old site.
+- Confirm image permissions and project status, particularly AlertCore. Its old portfolio linked only the general GitHub profile, so no project repository was invented.
+
+## Motion and accessibility
+
+Native scrolling, no scroll hijacking or Lenis. GSAP animates headline entry, section reveals, dividers, and mild desktop image parallax. `prefers-reduced-motion` disables all animation and smooth scrolling, including when the preference changes. Content remains readable without JavaScript. Navigation stays visible on mobile without a menu interaction. Semantic headings, skip navigation, visible focus rings, explicit image dimensions, and lazy loading are included. No external fonts or image requests are needed at runtime.
+
+No hosting registration or deployment was performed.
+
+
+## Minimal redesign
+Homepage updated to a black, compact layout based on the Joshua Baker reference supplied by the owner. Six genuine project cards, floating image parallax, short introduction, About, Experience & education, and Contact. No borrowed testimonials or client logos. Previous source saved in work/backups/src-before-minimal. IEEE and Group images also originate from the old portfolio.
+
+## Fonts and project galleries
+Uses locally bundled Geist Variable from Fontsource. All six cards open local detail pages. Descriptions and 23 gallery images were imported from C:/coding/webnew; AlertCore retains the original GitHub profile link because no project-specific repository was provided. Images open full size in a new tab.
+
+## Life journal
+Edit src/data/life.ts to add years and dated entries with a title, paragraphs, and optional image. Years and entries sort newest first. The Life page and homepage link are ready; 2026 and 2025 are empty until personal updates are supplied.
