@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {lifeYears} from '../data/life';
+const years=[...lifeYears].sort((a,b)=>b.year-a.year);
+const formatDate=(date:string)=>new Intl.DateTimeFormat('en-CA',{month:'long',day:'numeric',timeZone:'UTC'}).format(new Date(`${date}T12:00:00Z`));
+---
+<Layout title="Life — Aayan Shaikh" description="A personal journal, year by year.">
+<section class="life-page wrap">
+ <header class="life-header"><h1>Life</h1><p>A journal of what I’ve been up to, year by year.</p></header>
+ <nav class="life-years" aria-label="Journal years">{years.map(({year})=><a href={`#year-${year}`}>{year}</a>)}</nav>
+ <div class="life-journal">{years.map(({year,entries})=><section class="life-year" id={`year-${year}`} aria-labelledby={`heading-${year}`}><h2 id={`heading-${year}`}>{year}</h2><div class="life-entries">{entries.length? [...entries].sort((a,b)=>b.date.localeCompare(a.date)).map(entry=><article class="life-entry" data-reveal><time datetime={entry.date}>{formatDate(entry.date)}</time><h3>{entry.title}</h3>{entry.paragraphs.map(paragraph=><p>{paragraph}</p>)}{entry.image&&<figure><img src={entry.image.src} alt={entry.image.alt} loading="lazy" width="1000" height="750"/>{entry.image.caption&&<figcaption>{entry.image.caption}</figcaption>}</figure>}</article>):<p class="life-empty">Entries coming soon.</p>}</div></section>)}</div>
+</section>
+</Layout>
