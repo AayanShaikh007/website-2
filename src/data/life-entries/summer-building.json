@@ -1,0 +1,15 @@
+{
+  "slug": "summer-building",
+  "date": "2026",
+  "sortDate": "2026-08-31",
+  "dateLabel": "Summer 2026",
+  "location": "Waterloo, Ontario",
+  "title": "A Summer of Building Something of My Own",
+  "subtitle": "Entrepreneurship, software & engineering",
+  "paragraphs": [
+    "I spent much of this summer exploring what it means to build a business around engineering.",
+    "I began taking on client work and learning how to find opportunities, communicate technical ideas, manage expectations, and deliver something useful.",
+    "On the technical side, I’ve been working across embedded systems, C++, connected devices, cloud infrastructure, and software development. I can’t share much about the projects yet, but they’ve given me a better appreciation for building reliable systems outside a classroom.",
+    "There has been a lot of learning as I go, especially on the business side. It’s been rewarding to work on something of my own and see where it leads."
+  ]
+}
