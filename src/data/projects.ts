@@ -43,9 +43,26 @@ export const projects = [
     "repo": "https://github.com/AayanShaikh007/1420_final",
     "source": "https://github.com/AayanShaikh007/1420_final",
     "profileOnly": false,
-    "image": "/images/projects/campus-event-booking/cover.svg",
-    "alt": "Campus Event Booking — text cover, project photographs to be added",
-    "gallery": []
+    "image": "/images/projects/campus-event-booking/bookings.png",
+    "alt": "Campus Event Booking — JavaFX booking management interface",
+    "gallery": [
+      {
+        "src": "/images/projects/campus-event-booking/bookings.png",
+        "alt": "Campus Event Booking — JavaFX booking management interface"
+      },
+      {
+        "src": "/images/projects/campus-event-booking/events.png",
+        "alt": "Campus Event Booking — event creation and management interface"
+      },
+      {
+        "src": "/images/projects/campus-event-booking/waitlist.png",
+        "alt": "Campus Event Booking — waitlist management interface"
+      },
+      {
+        "src": "/images/projects/campus-event-booking/users.png",
+        "alt": "Campus Event Booking — user management interface"
+      }
+    ]
   },
   {
     "slug": "alertcore",
