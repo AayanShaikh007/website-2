@@ -55,7 +55,8 @@ loadButton?.addEventListener('click',async()=>{
   viewer.addEventListener('error',failed,{once:true});
   viewer.src='/models/kb01.glb';
   stage.append(viewer);
- }catch{
+ }catch(error){
+  console.error('Keyboard viewer startup failed:',error);
   loadButton.disabled=false;loadButton.textContent='Retry 3D view';
   if(status)status.textContent='The 3D viewer could not start in this browser. Project photos remain available.';
  }
@@ -64,4 +65,5 @@ resetButton?.addEventListener('click',()=>{
  if(viewer){viewer.cameraOrbit='0deg 55deg 105%';viewer.cameraTarget='auto auto auto';viewer.fieldOfView='35deg';viewer.jumpCameraToGoal();}
 });
 </script>
+
 
