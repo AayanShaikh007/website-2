@@ -1,0 +1,15 @@
+{
+  "slug": "uottahack",
+  "date": "2026-01-16",
+  "sortDate": "2026-01-18",
+  "dateLabel": "January 16–18, 2026",
+  "location": "Ottawa, Ontario",
+  "title": "Building with FPGAs and AI at uOttaHack",
+  "subtitle": "uOttaHack · Fourth place in the FPGA category",
+  "paragraphs": [
+    "In January, I travelled to Ottawa for uOttaHack. My team built K.A.R.E.N, a project combining FPGA hardware with an AI-powered interface.",
+    "We integrated services including ElevenLabs while exploring how software and programmable hardware could work together. I wanted more practical experience with FPGAs, so connecting one to a larger software system was a worthwhile challenge.",
+    "We placed fourth in the FPGA category. Given the time available, I was happy with what we managed to build and demonstrate.",
+    "Outside the competition, I enjoyed exploring Ottawa, visiting the University of Ottawa, and meeting students from other universities. It was interesting to compare their engineering communities with Guelph and Waterloo."
+  ]
+}
