@@ -46,7 +46,7 @@ loadButton?.addEventListener('click',async()=>{
    loadButton.hidden=true;
    if(resetButton)resetButton.hidden=false;
    if(status)status.textContent='Drag or use arrow keys to rotate. Scroll or pinch to zoom.';
-  },{once:true});
+  });
   const failed=()=>{
    viewer?.remove();viewer=undefined;
    stage.classList.remove('model-ready');
@@ -66,15 +66,15 @@ loadButton?.addEventListener('click',async()=>{
 resetButton?.addEventListener('click',()=>{
  if(viewer){viewer.cameraOrbit='0deg 55deg 105%';viewer.cameraTarget='auto auto auto';viewer.fieldOfView='35deg';viewer.jumpCameraToGoal();}
 });
-</script>
-
-
-
-<script>
-// The shared viewer uses a single WebGL canvas; switching models reuses it.
-const choice=document.querySelector<HTMLSelectElement>('.model-choice select');
-choice?.addEventListener('change',()=>{
- const element=document.querySelector('model-viewer');
- if(element){element.setAttribute('src',choice.value);element.setAttribute('camera-orbit','0deg 55deg 105%');element.setAttribute('camera-target','auto auto auto');}
+selection?.addEventListener('change',()=>{
+ if(!viewer||!stage)return;
+ stage.classList.remove('model-ready');
+ if(status)status.textContent='Loading '+selection.selectedOptions[0].textContent+'…';
+ if(resetButton)resetButton.hidden=true;
+ viewer.src=selection.value;
+ viewer.cameraOrbit='0deg 55deg 105%';
+ viewer.cameraTarget='auto auto auto';
 });
 </script>
+
+
