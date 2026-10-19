@@ -32,3 +32,6 @@ Source: https://github.com/AayanShaikh007/Nano_LoRa. The README describes an RP2
 
 Astro diagnostics pass with zero errors, warnings or hints. The production build generates 20 pages. All 17 project routes and 76 image responses pass local HTTP checks. Converted hardware models decode successfully and pass the Khronos glTF validator without errors or warnings. The viewers and model switching were exercised in Edge. The optional viewer dependency remains a deferred large chunk.
 
+
+Delivery drone: drone_assembly v15.step required native OpenCascade (cadquery-ocp 8.0.1.1 with VTK 9.6.2). The WASM reader returned empty mesh arrays and its output was rejected. Native tessellation at 0.7 mm produced 1,076,901 triangles across 38,020 faces, exported with a neutral material and compressed to 3,507,068 bytes. The complete assembly is available on request in the viewer.
+
