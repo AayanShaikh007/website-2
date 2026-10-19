@@ -7,7 +7,8 @@ export interface Experience {
  employmentType?: string;
  tags: string[];
 }
-// Personal responsibilities are sourced from the owner's local resume files.
+// Titles, dates, locations and employment types follow the owner-supplied LinkedIn excerpt.
+// Additional responsibilities come from the owner’s clarifications and local resume files.
 // Robotics start dates conflict between resume versions, so are omitted pending confirmation.
 export const experience: Experience[] = [
  {organization:'Stealth Startup',role:'Engineering',location:'Waterloo, Ontario · On-site',dates:'May 2026 — present',tags:['Electrical engineering']},
