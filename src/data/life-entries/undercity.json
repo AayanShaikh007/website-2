@@ -1,0 +1,18 @@
+{
+  "slug": "undercity",
+  "date": "2025-07",
+  "sortDate": "2025-07-14",
+  "dateLabel": "May–July 2025",
+  "location": "San Francisco, California",
+  "title": "From Personal Projects to San Francisco",
+  "subtitle": "Hack Club Undercity",
+  "paragraphs": [
+    "The journey to San Francisco started in May, right after I finished my IB exams.",
+    "With a few months before university, I spent my time working on hardware through Hack Club. I started with smaller builds, then designed a custom mechanical keyboard, a HOTAS flight control system, and another keyboard incorporating wireless technology.",
+    "Each project gave me something new to explore: PCB design, microcontrollers, firmware, mechanical design, or wireless communication. The possibility of attending a hardware hackathon in San Francisco added some extra motivation.",
+    "In July, I attended Hack Club’s Undercity event and worked alongside two teammates from North Carolina. I enjoyed collaborating in person with people I otherwise wouldn’t have met, surrounded by others working on their own hardware ideas.",
+    "One highlight was visiting GitHub’s headquarters. After spending so much time using GitHub for my projects, it was interesting to see the company and get a glimpse of San Francisco’s engineering culture.",
+    "Looking back, those months were productive in a way I really enjoyed. I learned a lot, built things I was interested in, and visited a city I’d wanted to see for a long time.",
+    "I’d recommend Hack Club to other young people interested in programming or hardware. The community gave me opportunities to build and meet people with similar interests."
+  ]
+}
