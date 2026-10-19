@@ -63,3 +63,6 @@ Homepage progress: a sticky header shows scroll progress and accessible section 
 Hardware source CAD audit: see docs/cad-inventory.md for repository links, formats, sizes, conversion priorities, and missing assemblies.
 
 KB-01 now has an optional Explore in 3D section using a 930 KB compressed GLB converted from the original STEP assembly. The viewer supports rotation, zoom, and reset; loading is deferred until clicked. See docs/kb01-model.md for conversion details and source limitations.
+
+Hardware viewers now share an optional click-to-load component, with separate part selectors for multi-model projects. Sources, conversion details and explicit missing-export limitations are documented in docs/hardware-models.md. Nano LoRa is included from its repository documentation with a labelled text cover.
+
