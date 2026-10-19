@@ -61,3 +61,5 @@ Life scroll motion: per-year progress tracks, reversible marker highlights, and 
 Homepage progress: a sticky header shows scroll progress and accessible section jump markers for Work, About, Experience, Education, and Contact. Current header links highlight where applicable. Progress recalculates when Show More expands the catalogue, images load, or the viewport changes. Reduced motion disables decorative transitions; position updates remain direct.
 
 Hardware source CAD audit: see docs/cad-inventory.md for repository links, formats, sizes, conversion priorities, and missing assemblies.
+
+KB-01 now has an optional Explore in 3D section using a 930 KB compressed GLB converted from the original STEP assembly. The viewer supports rotation, zoom, and reset; loading is deferred until clicked. See docs/kb01-model.md for conversion details and source limitations.
