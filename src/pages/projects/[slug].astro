@@ -1,7 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import YouTubeCover from '../../components/YouTubeCover.astro';
-import KeyboardModel from '../../components/KeyboardModel.astro';
+import CadModel from '../../components/CadModel.astro';
+import {projectModels} from '../../data/models';
 import {projects} from '../../data/projects';
 export function getStaticPaths(){return projects.map((project,index)=>({params:{slug:project.slug},props:{project,next:projects[(index+1)%projects.length]}}));}
 const {project:p,next}=Astro.props;
@@ -13,7 +14,7 @@ const {project:p,next}=Astro.props;
 {p.slug==='karen' && <YouTubeCover poster={p.image} alt={p.alt}/>}
 {p.gallery.length>0 && p.slug!=='karen' && <figure class="case-image"><a href={p.gallery[0].src} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size ${p.title} overview`}><img src={p.gallery[0].src} alt={p.gallery[0].alt} width="1200" height="800" fetchpriority="high"/></a></figure>}
 {p.gallery.length===0 && <p class="project-image-pending muted">Project photographs and screenshots will be added here.</p>}
-{p.slug==='kb01' && <KeyboardModel poster={p.image}/>}
+{projectModels[p.slug] && <CadModel poster={p.image} {...projectModels[p.slug]}/>}
 <section class="case-copy" aria-label="Project description">{p.paragraphs.slice(1).map(paragraph=><p>{paragraph}</p>)}</section>
 {p.gallery.length>1 && <section class="project-gallery" aria-label={`${p.title} image gallery`}><h2>Images</h2><p class="muted gallery-hint">Select an image to view full size.</p><div class="gallery-grid">{(p.slug==='karen'?p.gallery:p.gallery.slice(1)).map((image,i)=><figure><a href={image.src} target="_blank" rel="noopener noreferrer" aria-label={`Open ${p.title} image ${i+2} full size`}><img src={image.src} alt={image.alt} width="1000" height="750" loading="lazy"/></a><figcaption>{p.title} · {String(i+2).padStart(2,'0')}</figcaption></figure>)}</div></section>}
 <a class="next-project" href={`/projects/${next.slug}/`}><span class="muted">Next project</span><h2>{next.title} ↗</h2></a>
