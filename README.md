@@ -52,3 +52,6 @@ Edit src/data/life.ts to add years and dated entries with a title, paragraphs, a
 Owner clarification: use Stealth Startup as the public organization label; Guelph work concerns strawberry-picking robots; IEEE project leadership covers PCB, computer vision, and MATLAB. LinkedIn is https://www.linkedin.com/in/as770/. Automated LinkedIn retrieval returned HTTP 999, so no additional profile claims were inferred.
 
 Campus Event Booking now uses owner-supplied JavaFX screenshots, with Booking Management as cover. Mosaic Generator is deliberately last, labelled Grade 12, with input/output images sourced from its GitHub README: https://github.com/AayanShaikh007/Mosaic-Generator.
+
+## Life entries
+Ten stories were adapted from the owner-supplied October 18 notes, using the revised San Francisco, first-year, uOttaHack and Hack the North drafts. Entries live individually in src/data/life-entries/*.json; life.ts groups and sorts them. sortDate is an internal ordering key; dateLabel shows the supplied month, date range, or season without inventing exact attendance dates. Personal claims come from the supplied drafts. No stock or fabricated photography was added. Native details controls expose the full text without JavaScript.
