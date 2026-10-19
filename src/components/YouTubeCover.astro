@@ -1,0 +1,41 @@
+---
+interface Props { poster: string; alt: string }
+const {poster,alt}=Astro.props;
+---
+<div class="demo-cover" data-youtube-demo>
+ <img src={poster} alt={alt} width="764" height="573"/>
+ <button type="button" class="button demo-play">Play muted demo</button>
+</div>
+<p class="demo-note">Demo plays muted. <a href="https://www.youtube.com/watch?v=EzlKpMmOmgM&t=51s" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></p>
+<script>
+const cover=document.querySelector<HTMLElement>('[data-youtube-demo]');
+if(cover){
+ const button=cover.querySelector<HTMLButtonElement>('button');
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+ let frame: HTMLIFrameElement | undefined;
+ const load=()=>{
+  if(frame)return;
+  frame=document.createElement('iframe');
+  frame.title='K.A.R.E.N demonstration video — starts muted';
+  frame.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+  frame.allowFullscreen=true;
+  frame.referrerPolicy='strict-origin-when-cross-origin';
+  frame.src='https://www.youtube-nocookie.com/embed/EzlKpMmOmgM?start=51&autoplay=1&mute=1&playsinline=1&controls=1&enablejsapi=1&origin='+encodeURIComponent(window.location.origin);
+  frame.addEventListener('load',()=>{
+   frame?.contentWindow?.postMessage(JSON.stringify({event:'command',func:'mute',args:[]}), 'https://www.youtube-nocookie.com');
+  });
+  cover.append(frame);
+  if(button)button.hidden=true;
+ };
+ button?.addEventListener('click',load);
+ const observer=new IntersectionObserver(entries=>{
+  const visible=entries.some(entry=>entry.isIntersecting);
+  if(visible&&!reduced.matches)load();
+  if(!visible)frame?.contentWindow?.postMessage(JSON.stringify({event:'command',func:'pauseVideo',args:[]}), 'https://www.youtube-nocookie.com');
+ },{threshold:.3});
+ observer.observe(cover);
+ reduced.addEventListener('change',()=>{
+  if(reduced.matches&&frame){frame.remove();frame=undefined;if(button)button.hidden=false;}
+ });
+}
+</script>
