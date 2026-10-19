@@ -27,3 +27,8 @@ IEEE Heart and Nano LoRa have KiCad files but no component-complete 3D export in
 ## Nano LoRa
 
 Source: https://github.com/AayanShaikh007/Nano_LoRa. The README describes an RP2350B development board with battery support, LoRa communication and GPIO headers, inspired by the Pico keyboard project. The repository has KiCad schematic/layout, Gerbers, journal and a CC BY-NC 4.0 license. It does not publish project images; the portfolio uses a labelled text cover until genuine images are available. Group and Mosaic remain at the end of the catalogue.
+
+## Validation
+
+Astro diagnostics pass with zero errors, warnings or hints. The production build generates 20 pages. All 17 project routes and 76 image responses pass local HTTP checks. Converted hardware models decode successfully and pass the Khronos glTF validator without errors or warnings. The viewers and model switching were exercised in Edge. The optional viewer dependency remains a deferred large chunk.
+
