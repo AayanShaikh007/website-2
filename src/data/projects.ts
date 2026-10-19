@@ -236,33 +236,6 @@ export const projects = [
     "profileOnly": false
   },
   {
-    "slug": "group",
-    "title": "Group",
-    "category": "Software",
-    "image": "/images/projects/group/1.png",
-    "alt": "Group — design documentation 1",
-    "summary": "An Expo-based mobile app that uses technology to bring people together by making gatherings less stressful to manage. Built with TypeScript, file-based routing, and modern Expo tooling.",
-    "paragraphs": [
-      "An Expo-based mobile app that uses technology to bring people together by making gatherings less stressful to manage. Built with TypeScript, file-based routing, and modern Expo tooling."
-    ],
-    "gallery": [
-      {
-        "src": "/images/projects/group/1.png",
-        "alt": "Group — design documentation 1"
-      },
-      {
-        "src": "/images/projects/group/2.png",
-        "alt": "Group — design documentation 2"
-      },
-      {
-        "src": "/images/projects/group/3.png",
-        "alt": "Group — design documentation 3"
-      }
-    ],
-    "repo": "https://github.com/AayanShaikh007/Group",
-    "profileOnly": false
-  },
-  {
     "slug": "delivery-drone",
     "title": "Delivery Drone",
     "category": "Robotics",
@@ -471,6 +444,33 @@ export const projects = [
       }
     ],
     "repo": "https://github.com/AayanShaikh007/mouse",
+    "profileOnly": false
+  },
+  {
+    "slug": "group",
+    "title": "Group",
+    "category": "Software",
+    "image": "/images/projects/group/1.png",
+    "alt": "Group — design documentation 1",
+    "summary": "An Expo-based mobile app that uses technology to bring people together by making gatherings less stressful to manage. Built with TypeScript, file-based routing, and modern Expo tooling.",
+    "paragraphs": [
+      "An Expo-based mobile app that uses technology to bring people together by making gatherings less stressful to manage. Built with TypeScript, file-based routing, and modern Expo tooling."
+    ],
+    "gallery": [
+      {
+        "src": "/images/projects/group/1.png",
+        "alt": "Group — design documentation 1"
+      },
+      {
+        "src": "/images/projects/group/2.png",
+        "alt": "Group — design documentation 2"
+      },
+      {
+        "src": "/images/projects/group/3.png",
+        "alt": "Group — design documentation 3"
+      }
+    ],
+    "repo": "https://github.com/AayanShaikh007/Group",
     "profileOnly": false
   },
   {
