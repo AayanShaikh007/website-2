@@ -13,9 +13,22 @@ export const projects = [
     "repo": "https://github.com/YimingH34/uottahack-8-karen",
     "source": "https://devpost.com/software/karen-5g01yk",
     "profileOnly": false,
-    "image": "/images/projects/karen/cover.svg",
-    "alt": "K.A.R.E.N — text cover, project photographs to be added",
-    "gallery": []
+    "image": "/images/projects/karen/waveform.png",
+    "alt": "K.A.R.E.N voice waveform running on the demonstration monitor",
+    "gallery": [
+      {
+        "src": "/images/projects/karen/waveform.png",
+        "alt": "K.A.R.E.N voice waveform running on the demonstration monitor"
+      },
+      {
+        "src": "/images/projects/karen/breakout.png",
+        "alt": "K.A.R.E.N Breakout game displayed on the demonstration monitor"
+      },
+      {
+        "src": "/images/projects/karen/screensaver.png",
+        "alt": "K.A.R.E.N ROSS screensaver on the demonstration monitor"
+      }
+    ]
   },
   {
     "slug": "campus-event-booking",
