@@ -25,7 +25,8 @@ loadButton?.addEventListener('click',async()=>{
  loadButton.textContent='Loading 3D…';
  if(status)status.textContent='Loading the keyboard model…';
  try{
-  await import('@google/model-viewer');
+  const {ModelViewerElement}=await import('@google/model-viewer');
+  ModelViewerElement.dracoDecoderLocation='/decoders/draco/';
   viewer=document.createElement('model-viewer') as ModelViewerElement;
   viewer.alt='KB-01 custom mechanical keyboard CAD assembly. Drag or use arrow keys to rotate; pinch or scroll to zoom.';
   viewer.setAttribute('camera-controls','');
@@ -63,3 +64,4 @@ resetButton?.addEventListener('click',()=>{
  if(viewer){viewer.cameraOrbit='0deg 55deg 105%';viewer.cameraTarget='auto auto auto';viewer.fieldOfView='35deg';viewer.jumpCameraToGoal();}
 });
 </script>
+
