@@ -50,3 +50,5 @@ Edit src/data/life.ts to add years and dated entries with a title, paragraphs, a
 
 
 Owner clarification: use Stealth Startup as the public organization label; Guelph work concerns strawberry-picking robots; IEEE project leadership covers PCB, computer vision, and MATLAB. LinkedIn is https://www.linkedin.com/in/as770/. Automated LinkedIn retrieval returned HTTP 999, so no additional profile claims were inferred.
+
+Campus Event Booking now uses owner-supplied JavaFX screenshots, with Booking Management as cover. Mosaic Generator is deliberately last, labelled Grade 12, with input/output images sourced from its GitHub README: https://github.com/AayanShaikh007/Mosaic-Generator.
