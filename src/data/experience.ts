@@ -4,6 +4,7 @@ export interface Experience {
  location: string;
  dates?: string;
  description?: string;
+ employmentType?: string;
  tags: string[];
 }
 // Personal responsibilities are sourced from the owner's local resume files.
