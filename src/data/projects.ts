@@ -140,14 +140,18 @@ export const projects = [
     "slug": "kb01",
     "title": "KB-01",
     "category": "Hardware",
-    "image": "/images/projects/kb01/1.png",
-    "alt": "KB-01 — design documentation 1",
+    "image": "/images/projects/kb01/studio-cover.png",
+    "alt": "KB-01 keyboard photographed on a charcoal surface; AI-staged background",
     "summary": "I've always wanted to make a mechanical keyboard, and after owning two proprietary keyboards, I had an idea of what features I wanted to incorporate in my final design. To begin, I love the OLED display in the high end steelseries keyboards, so that was a must-add. One of my keyboards, a Corsair K65, broke after I tried to fix a malfunctioning switch and damaged the board, shorting the traces for a few surrounding keys. It is due to this that I decided to make this keyboard hot-swappable, so that you can easily swap switches (mx and kalih).",
     "paragraphs": [
       "I've always wanted to make a mechanical keyboard, and after owning two proprietary keyboards, I had an idea of what features I wanted to incorporate in my final design. To begin, I love the OLED display in the high end steelseries keyboards, so that was a must-add. One of my keyboards, a Corsair K65, broke after I tried to fix a malfunctioning switch and damaged the board, shorting the traces for a few surrounding keys. It is due to this that I decided to make this keyboard hot-swappable, so that you can easily swap switches (mx and kalih).",
       "I extensively journalled this project on my github, just look for the file named JOURNAL.md and click them to see the entire engineering and build process."
     ],
     "gallery": [
+      {
+        "src": "/images/projects/kb01/studio-cover.png",
+        "alt": "KB-01 keyboard photographed on a charcoal surface; AI-staged background"
+      },
       {
         "src": "/images/projects/kb01/1.png",
         "alt": "KB-01 — design documentation 1"
