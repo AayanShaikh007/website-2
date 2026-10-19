@@ -1,0 +1,80 @@
+---
+interface Props { poster: string; title: string; models: {label: string; src: string}[]; note: string }
+const {poster,title,models,note}=Astro.props;
+---
+<section class="model-section" aria-labelledby="cad-model-heading">
+ <div class="model-heading"><h2 id="cad-model-heading">Explore the CAD model</h2><span>{title}</span></div>
+ {models.length>1 && <label class="model-choice">Model <select aria-label="Choose CAD model">{models.map(model=><option value={model.src}>{model.label}</option>)}</select></label>}
+ <div class="model-stage" data-model-stage data-model-src={models[0].src} data-model-title={title}>
+  <img src={poster} alt={`${title} project photograph`} width="1200" height="800" class="model-poster"/>
+  <button type="button" class="button model-load">Explore in 3D</button>
+ </div>
+ <div class="model-tools"><p class="model-status" role="status">Loads on request. Drag to rotate; scroll or pinch to zoom.</p><button type="button" class="button model-reset" hidden>Reset view</button></div>
+ <p class="model-note">{note}</p>
+ <noscript><p class="muted">Enable JavaScript to explore the model, or <a href="/models/kb01.glb">download the GLB file</a>.</p></noscript>
+</section>
+<script>
+import type {ModelViewerElement} from '@google/model-viewer';
+const stage=document.querySelector<HTMLElement>('[data-model-stage]');
+const loadButton=document.querySelector<HTMLButtonElement>('.model-load');
+const resetButton=document.querySelector<HTMLButtonElement>('.model-reset');
+const selection=document.querySelector<HTMLSelectElement>('.model-choice select');
+const status=document.querySelector<HTMLElement>('.model-status');
+let viewer: ModelViewerElement | undefined;
+loadButton?.addEventListener('click',async()=>{
+ if(!stage||!loadButton)return;
+ loadButton.disabled=true;
+ loadButton.textContent='Loading 3D…';
+ if(status)status.textContent='Loading the CAD model…';
+ try{
+  const {ModelViewerElement}=await import('@google/model-viewer');
+  ModelViewerElement.dracoDecoderLocation='/decoders/draco/';
+  viewer=document.createElement('model-viewer') as ModelViewerElement;
+  viewer.alt=(stage.dataset.modelTitle??'Project')+' CAD model. Drag or use arrow keys to rotate; pinch or scroll to zoom.';
+  viewer.setAttribute('camera-controls','');
+  viewer.setAttribute('touch-action','pan-y');
+  viewer.setAttribute('interaction-prompt','none');
+  viewer.setAttribute('camera-orbit','0deg 55deg 105%');
+  viewer.setAttribute('field-of-view','35deg');
+  viewer.setAttribute('shadow-intensity','0.8');
+  viewer.setAttribute('exposure','1.1');
+  viewer.setAttribute('loading','eager');
+  viewer.setAttribute('environment-image','neutral');
+  viewer.poster=stage.querySelector('img')?.src??'';
+  viewer.addEventListener('load',()=>{
+   stage.classList.add('model-ready');
+   loadButton.hidden=true;
+   if(resetButton)resetButton.hidden=false;
+   if(status)status.textContent='Drag or use arrow keys to rotate. Scroll or pinch to zoom.';
+  },{once:true});
+  const failed=()=>{
+   viewer?.remove();viewer=undefined;
+   stage.classList.remove('model-ready');
+   loadButton.disabled=false;loadButton.hidden=false;loadButton.textContent='Retry 3D view';
+   if(resetButton)resetButton.hidden=true;
+   if(status)status.textContent='The 3D view could not load. You can retry; the project photos are still available.';
+  };
+  viewer.addEventListener('error',failed,{once:true});
+  viewer.src=selection?.value??stage.dataset.modelSrc??'';
+  stage.append(viewer);
+ }catch(error){
+  console.error('CAD viewer startup failed:',error);
+  loadButton.disabled=false;loadButton.textContent='Retry 3D view';
+  if(status)status.textContent='The 3D viewer could not start in this browser. Project photos remain available.';
+ }
+});
+resetButton?.addEventListener('click',()=>{
+ if(viewer){viewer.cameraOrbit='0deg 55deg 105%';viewer.cameraTarget='auto auto auto';viewer.fieldOfView='35deg';viewer.jumpCameraToGoal();}
+});
+</script>
+
+
+
+<script>
+// The shared viewer uses a single WebGL canvas; switching models reuses it.
+const choice=document.querySelector<HTMLSelectElement>('.model-choice select');
+choice?.addEventListener('change',()=>{
+ const element=document.querySelector('model-viewer');
+ if(element){element.setAttribute('src',choice.value);element.setAttribute('camera-orbit','0deg 55deg 105%');element.setAttribute('camera-target','auto auto auto');}
+});
+</script>
