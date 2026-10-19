@@ -31,3 +31,5 @@
 
 .model-choice{display:flex;align-items:center;gap:12px;font-size:12px;color:#aaa;margin:0 0 15px}.model-choice select{font:inherit;padding:8px 12px;background:#171717;color:#eee;border:1px solid #444;border-radius:5px}
 
+
+@media(max-width:600px){.nav{height:auto;min-height:96px;flex-wrap:wrap;align-content:center;row-gap:2px;padding-block:10px}.nav>.brand{flex-basis:100%}.nav>nav[aria-label="Main navigation"]{gap:20px;flex-wrap:wrap}.nav>nav[aria-label="Main navigation"] a{white-space:nowrap}}
