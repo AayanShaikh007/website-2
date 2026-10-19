@@ -13,3 +13,5 @@ Converted on October 19, 2026 using occt-import-js (OpenCascade), glTF Transform
 - Model was decoded again after export and visually loaded in the browser. Keyboard rotation and Reset view were checked. Source dimensions approximately 413 × 156 × 26 mm.
 
 Decoder distribution is copied from three.js examples/jsm/libs/draco/gltf (Google Draco). See the included decoder license notice. No CAD converter runs in the visitor's browser.
+
+Development loading fix: explicitly prebundle @google/model-viewer before user interaction. A stale Vite dependency URL caused HTTP 504 Outdated Optimize Dep in Edge; the CAD file was valid. Startup failures now log the underlying error. Restart the dev server after dependency/config changes.
