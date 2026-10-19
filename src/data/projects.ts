@@ -472,5 +472,38 @@ export const projects = [
     ],
     "repo": "https://github.com/AayanShaikh007/mouse",
     "profileOnly": false
+  },
+  {
+    "slug": "mosaic-generator",
+    "title": "Mosaic Generator",
+    "category": "Grade 12 · Python",
+    "image": "/images/projects/mosaic-generator/output-1.png",
+    "alt": "Mosaic Generator — first photo mosaic output",
+    "summary": "A Grade 12 Python project that turns a picture into a mosaic made from smaller photographs.",
+    "paragraphs": [
+      "A Grade 12 Python project that turns a picture into a mosaic made from smaller photographs.",
+      "The generator divides a target image into cells and matches each cell with a source photo based on its average colour. The assembled tiles recreate the larger image.",
+      "The desktop app includes sample targets and source collections, supports selecting another image from disk, and saves the finished mosaic as a JPEG. It can also run without the GUI."
+    ],
+    "gallery": [
+      {
+        "src": "/images/projects/mosaic-generator/output-1.png",
+        "alt": "Mosaic Generator — first photo mosaic output"
+      },
+      {
+        "src": "/images/projects/mosaic-generator/input-1.png",
+        "alt": "Mosaic Generator — original image for the first mosaic"
+      },
+      {
+        "src": "/images/projects/mosaic-generator/input-2.png",
+        "alt": "Mosaic Generator — original image for the second mosaic"
+      },
+      {
+        "src": "/images/projects/mosaic-generator/output-2.png",
+        "alt": "Mosaic Generator — second photo mosaic output"
+      }
+    ],
+    "repo": "https://github.com/AayanShaikh007/Mosaic-Generator",
+    "profileOnly": false
   }
 ];
