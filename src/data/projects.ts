@@ -447,6 +447,22 @@ export const projects = [
     "profileOnly": false
   },
   {
+    "slug": "nano-lora",
+    "title": "Nano LoRa",
+    "category": "PCB · Embedded",
+    "image": "/images/projects/nano-lora/cover.svg",
+    "alt": "Nano LoRa RP2350-based development board — project image to be added",
+    "summary": "A custom RP2350B development board designed around LoRa communication and battery support.",
+    "paragraphs": [
+      "A custom RP2350B development board designed around LoRa communication and battery support.",
+      "The idea came from building my Pico-powered keyboard and wanting an affordable microcontroller board with wireless communication and battery support. Nano LoRa brings those features into a custom PCB with GPIO exposed through pin headers.",
+      "The repository contains the KiCad schematic and board layout, manufacturing Gerbers, and a design journal. This page describes the board design; finished-board photographs and a component-complete 3D export are still to be added."
+    ],
+    "gallery": [],
+    "repo": "https://github.com/AayanShaikh007/Nano_LoRa",
+    "profileOnly": false
+  },
+  {
     "slug": "group",
     "title": "Group",
     "category": "Software",
