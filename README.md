@@ -59,3 +59,5 @@ Ten stories were adapted from the owner-supplied October 18 notes, using the rev
 Life scroll motion: per-year progress tracks, reversible marker highlights, and one-time entry reveals. Reduced-motion and no-JavaScript views remain static and readable. Expanding or closing a story refreshes ScrollTrigger positions.
 
 Homepage progress: a sticky header shows scroll progress and accessible section jump markers for Work, About, Experience, Education, and Contact. Current header links highlight where applicable. Progress recalculates when Show More expands the catalogue, images load, or the viewport changes. Reduced motion disables decorative transitions; position updates remain direct.
+
+Hardware source CAD audit: see docs/cad-inventory.md for repository links, formats, sizes, conversion priorities, and missing assemblies.
