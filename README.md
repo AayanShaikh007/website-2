@@ -55,3 +55,5 @@ Campus Event Booking now uses owner-supplied JavaFX screenshots, with Booking Ma
 
 ## Life entries
 Ten stories were adapted from the owner-supplied October 18 notes, using the revised San Francisco, first-year, uOttaHack and Hack the North drafts. Entries live individually in src/data/life-entries/*.json; life.ts groups and sorts them. sortDate is an internal ordering key; dateLabel shows the supplied month, date range, or season without inventing exact attendance dates. Personal claims come from the supplied drafts. No stock or fabricated photography was added. Native details controls expose the full text without JavaScript.
+
+Life scroll motion: per-year progress tracks, reversible marker highlights, and one-time entry reveals. Reduced-motion and no-JavaScript views remain static and readable. Expanding or closing a story refreshes ScrollTrigger positions.
