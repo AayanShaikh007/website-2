@@ -12,7 +12,7 @@ export interface Experience {
 // Robotics start dates conflict between resume versions, so are omitted pending confirmation.
 export const experience: Experience[] = [
  {organization:'Stealth Startup',role:'Engineering',location:'Waterloo, Ontario · On-site',dates:'May 2026 — present',tags:['Electrical engineering']},
- {organization:'Google Developer Groups on Campus | UoG',role:'Financial Director',location:'Guelph, Ontario',dates:'September 2026 — present',tags:[]},
+ {organization:'Google Developer Groups · UofG',role:'Financial Director',location:'Guelph, Ontario',dates:'September 2026 — present',tags:[]},
  {organization:'IEEE Student Branch at the University of Guelph',role:'Project Lead',location:'Guelph, Ontario · On-site',dates:'September 2025 — present',description:'Leading technical projects across PCB design, computer vision, and MATLAB at the University of Guelph IEEE Student Branch. I design boards for workshops, help attendees with KiCad, soldering, and troubleshooting, and maintain the club website with React and JavaScript.',tags:['Project leadership','PCB design','Computer vision','MATLAB','KiCad','React']},
  {organization:'University of Guelph',role:'Robotics Research Assistant',location:'Guelph, Ontario',description:'Working on strawberry-picking robots at the University of Guelph. My research work includes robotic-arm motion control on QNX, MATLAB simulation and test analysis, and integrating sensor and vision inputs for autonomous operation.',tags:['QNX','Robotics','MATLAB','Sensors']},
  {organization:'Alignerr',role:'AI Software Engineer',employmentType:'Internship',location:'Remote',dates:'January 2026 — August 2026',tags:['Software development','Agentic AI development']},
