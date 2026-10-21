@@ -1,4 +1,4 @@
 Contact: mailto:aayanshaikh770@gmail.com
 Expires: 2027-10-01T00:00:00Z
 Preferred-Languages: en
-Canonical: https://aayanshaikh.vercel.app/.well-known/security.txt
+Canonical: https://aayanshaikh.dev/.well-known/security.txt
