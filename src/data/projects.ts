@@ -144,8 +144,8 @@ export const projects = [
     "slug": "h2-at-home",
     "title": "H₂@Home",
     "category": "Embedded",
-    "image": "/images/projects/h2-at-home/1.jpg",
-    "alt": "H₂@Home — project overview 1",
+    "image": "/images/projects/h2-at-home/3.jpg",
+    "alt": "H₂@Home — project detail 3",
     "summary": "Automation and monitoring software for a decentralized hydrogen generation system. Guelph Engineering Competition 2025 - Gold (1st Place).",
     "paragraphs": [
       "Automation and monitoring software for a decentralized hydrogen generation system. Guelph Engineering Competition 2025 - Gold (1st Place).",
@@ -155,16 +155,16 @@ export const projects = [
     ],
     "gallery": [
       {
+        "src": "/images/projects/h2-at-home/3.jpg",
+        "alt": "H₂@Home — project detail 3"
+      },
+      {
         "src": "/images/projects/h2-at-home/1.jpg",
         "alt": "H₂@Home — project overview 1"
       },
       {
         "src": "/images/projects/h2-at-home/2.jpg",
         "alt": "H₂@Home — project detail 2"
-      },
-      {
-        "src": "/images/projects/h2-at-home/3.jpg",
-        "alt": "H₂@Home — project detail 3"
       }
     ],
     "repo": "https://github.com/AayanShaikh007/h2atHome",
