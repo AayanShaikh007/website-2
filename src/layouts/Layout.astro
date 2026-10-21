@@ -3,8 +3,8 @@ import '../styles/global.css';
 interface Props { title?: string; description?: string }
 const {title='Aayan Shaikh — Computer Engineering',description='Computer Engineering student at the University of Guelph. Embedded systems, custom hardware, and software.'}=Astro.props;
 const isHome=Astro.url.pathname==='/';
-const canonicalUrl=new URL(Astro.url.pathname,'https://aayanshaikh.vercel.app/').href;
-const socialImage='https://aayanshaikh.vercel.app/social-preview.jpg';
+const canonicalUrl=new URL(Astro.url.pathname,'https://aayanshaikh.dev/').href;
+const socialImage='https://aayanshaikh.dev/social-preview.jpg';
 const socialImageAlt='Aayan Shaikh, Computer Engineer. CAD previews of KB-01, Delivery Drone, and X-70 HOTAS.';
 const sections=[['projects','Work'],['about','About'],['experience','Experience'],['education','Education'],['contact','Contact']];
 ---
