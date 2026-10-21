@@ -1,6 +1,48 @@
 // Project descriptions: old portfolio, Devpost, and linked repositories.
 export const projects = [
   {
+    "slug": "nanoquant",
+    "title": "NanoQuant",
+    "category": "FPGA · Software",
+    "image": "/images/projects/nanoquant/hardware-photo.webp",
+    "alt": "Tang Nano 9K board in front of the NanoQuant trading terminal",
+    "summary": "A Tang Nano 9K FPGA trading engine, Python reference model, and React research terminal. All trading is simulated.",
+    "paragraphs": [
+      "A Tang Nano 9K FPGA trading engine, Python reference model, and React research terminal. All trading is simulated.",
+      "I built NanoQuant to connect FPGA coursework with a larger software system. A Verilog engine makes buy, sell, and hold decisions under order and position limits. Validated UART packets link it to Python, checking headers, CRC, sequence numbers, and agreement with the reference engine. Hardware LEDs indicate actions, kill state, and protocol errors.",
+      "A Python/FastAPI backend streams telemetry over WebSockets to a React and TypeScript client built with Tailwind CSS and Recharts. The terminal includes interactive trade markers, a $10,000 paper portfolio with fees and realized/unrealized P&L, historical replay, and engineering diagnostics. Generated prices, historical datasets, and Alpaca IEX stock data are selected independently from Python or physical FPGA execution.",
+      "The published validation notes record matching physical FPGA and Python decisions. Measured host round trips were approximately 4.2–4.7 ms, including UART transfer, USB buffering, operating-system scheduling, and host processing. These results validate the tested communication path; they do not establish isolated FPGA computation latency.",
+      "The one-cycle architecture at 27 MHz implies approximately 37 ns per engine stage. That is an architectural estimate, not a physical timing measurement or a demonstrated speedup over Python. No profitable strategy has been demonstrated. Every order and fill remains simulated; the application does not place brokerage orders.",
+      "The client screenshots below use the Python reference engine and generated demo prices. Their paper P&L is simulation output, not a performance claim. The hardware photo and short video excerpt are separate views of the physical setup."
+    ],
+    "gallery": [
+      {
+        "src": "/images/projects/nanoquant/hardware-photo.webp",
+        "alt": "Tang Nano 9K board in front of the NanoQuant trading terminal",
+        "caption": "Physical setup · owner-supplied photograph"
+      },
+      {
+        "src": "/images/projects/nanoquant/client-overview.webp",
+        "alt": "NanoQuant React terminal displaying generated prices and Python buy/sell decisions",
+        "caption": "Web client · generated demo prices, Python engine"
+      },
+      {
+        "src": "/images/projects/nanoquant/client-diagnostics.webp",
+        "alt": "NanoQuant trade inspector, simulated paper portfolio and engineering monitor",
+        "caption": "Paper accounting and diagnostics · generated-data simulation"
+      },
+      {
+        "src": "/images/projects/nanoquant/hardware-demo.gif",
+        "poster": "/images/projects/nanoquant/hardware-demo-poster.webp",
+        "alt": "Short clip of the Tang Nano 9K board with active indicator LEDs",
+        "caption": "Physical board demo · 4.8-second GIF, plays once; open to replay"
+      }
+    ],
+    "repo": "https://github.com/AayanShaikh007/fpga_stockmarketsimulation",
+    "source": "https://github.com/AayanShaikh007/fpga_stockmarketsimulation/blob/main/docs/validation.md",
+    "profileOnly": false
+  },
+  {
     "slug": "karen",
     "title": "K.A.R.E.N",
     "category": "FPGA · AI",
