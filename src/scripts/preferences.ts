@@ -20,7 +20,7 @@ const updateMotion=()=>{
 updateTheme();updateMotion();
 theme?.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';save('portfolio-theme',root.dataset.theme);updateTheme();});
 motion?.addEventListener('click',()=>{root.dataset.motion=root.dataset.motion==='low'?'full':'low';save('portfolio-motion',root.dataset.motion);updateMotion();window.location.reload();});
-for(const [query,key] of [['(prefers-color-scheme: light)','portfolio-theme'],['(prefers-reduced-motion: reduce)','portfolio-motion']]){
+for(const [query,key] of [['(prefers-reduced-motion: reduce)','portfolio-motion']]){
  window.matchMedia(query).addEventListener('change',()=>{try{if(!localStorage.getItem(key))window.location.reload();}catch{window.location.reload();}});
 }
 export {};
