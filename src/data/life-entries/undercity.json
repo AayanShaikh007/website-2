@@ -14,5 +14,42 @@
     "One highlight was visiting GitHub’s headquarters. After spending so much time using GitHub for my projects, it was interesting to see the company and get a glimpse of San Francisco’s engineering culture.",
     "Looking back, those months were productive in a way I really enjoyed. I learned a lot, built things I was interested in, and visited a city I’d wanted to see for a long time.",
     "I’d recommend Hack Club to other young people interested in programming or hardware. The community gave me opportunities to build and meet people with similar interests."
+  ],
+  "images": [
+    {
+      "src": "/images/life/undercity/github-sign.webp",
+      "alt": "GitHub sign outside the headquarters",
+      "caption": "GitHub headquarters",
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "src": "/images/life/undercity/octocat.webp",
+      "alt": "Framed Octocat artwork inside GitHub headquarters",
+      "caption": "Inside GitHub",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "src": "/images/life/undercity/san-francisco-tram.webp",
+      "alt": "Tram tracks and palm trees on a San Francisco street",
+      "caption": "San Francisco · July 2025",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "src": "/images/life/undercity/city-view.webp",
+      "alt": "View of the city from an outdoor walkway",
+      "caption": "A view of the city",
+      "width": 900,
+      "height": 1600
+    },
+    {
+      "src": "/images/life/undercity/san-francisco-street.webp",
+      "alt": "Downtown buildings and a street in San Francisco",
+      "caption": "Around San Francisco",
+      "width": 1600,
+      "height": 722
+    }
   ]
 }
