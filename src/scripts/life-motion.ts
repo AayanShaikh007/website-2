@@ -15,7 +15,7 @@ if(journal){
    gsap.fromTo(entry,{'--marker-fill':'#050505','--marker-border':'#555'},{'--marker-fill':'#e5e5e5','--marker-border':'#e5e5e5',duration:.3,scrollTrigger:{trigger:entry,start:'top 65%',toggleActions:'play none none reverse'}});
   });
   gsap.utils.toArray<HTMLElement>('[data-journal-photo]').forEach((photo,index)=>{
-   gsap.from(photo,{x:()=>window.innerWidth-photo.getBoundingClientRect().left+30,rotation:14+(index%3)*5,opacity:0,duration:1.15,delay:(index%2)*.09,ease:'power3.out',clearProps:'transform,opacity',scrollTrigger:{trigger:photo,start:'top 94%',once:true,invalidateOnRefresh:true}});
+   gsap.from(photo,{x:()=>window.innerWidth-photo.getBoundingClientRect().left+30,rotation:14+(index%3)*5,opacity:0,duration:1.15,delay:(index%2)*.09,ease:'power3.out',clearProps:'transform,opacity',scrollTrigger:{trigger:photo,start:'top 75%',once:true,invalidateOnRefresh:true}});
   });
   // Refresh positions when an entry expands, including later entries and year tracks.
   const refresh=()=>ScrollTrigger.refresh();
