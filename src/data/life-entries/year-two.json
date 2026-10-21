@@ -1,14 +1,31 @@
 {
   "slug": "year-two",
   "date": "2026-09",
-  "sortDate": "2026-09-30",
-  "dateLabel": "September 2026",
+  "sortDate": "2026-10-20",
+  "dateLabel": "September–October 2026",
   "location": "Guelph, Ontario",
   "title": "Back for Year Two",
   "subtitle": "Computer Engineering · University of Guelph",
   "paragraphs": [
     "Starting my second year feels quite different from starting my first.",
     "I’ve become much more interested in the intersection of software, hardware, and the systems that connect them. Working on projects, collaborating with other engineers, and exploring entrepreneurship has also changed how I approach what I’m learning in class.",
+    "Working with an FPGA board in class has been a highlight. It feels like a shift from mostly theoretical work toward practical skills I could use in the workplace, and I’m happy to be getting that experience.",
     "This year, I’m hoping to go deeper into software engineering, embedded systems, and research, while continuing to build things independently. There’s still a lot I don’t know, but that’s part of what makes it interesting."
+  ],
+  "images": [
+    {
+      "src": "/images/life/year-two/class-fpga.webp",
+      "alt": "FPGA development board being used in class",
+      "caption": "The FPGA board we’re using in class · October 2026",
+      "width": 1600,
+      "height": 793
+    },
+    {
+      "src": "/images/life/year-two/nanoquant.webp",
+      "alt": "NanoQuant trading terminal displayed behind a connected hardware board",
+      "caption": "NanoQuant — a project I’ve been working on to extend what I’m learning in my FPGA courses.",
+      "width": 1600,
+      "height": 722
+    }
   ]
 }
