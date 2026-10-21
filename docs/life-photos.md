@@ -11,7 +11,16 @@ The following clear matches have been placed. Filenames identify the original ph
 | Guelph Engineering Competition | `IMG_20251116_193647_242.jpg` |
 | Ontario Engineering Competition | `IMG_20260123_131554152.jpg`, `IMG_20260124_175315643.jpg`, `IMG_20260124_201238529.jpg` |
 
-Awaiting owner context: November 6 robot; six April 2 Microsoft/Copilot photos; May 7 portrait; October 9 FPGA board; October 20 trading terminal and board. These ten files have not been copied into public assets or attributed to events.
+Owner clarification on October 21 placed all remaining photos:
+
+| Life entry | Original files |
+| --- | --- |
+| First Year, engineering design challenge coursework | `IMG_20251106_180440937.jpg` |
+| New GitHub Copilot Dev Days entry, April 2, 2026 | `IMG_20260402_134120699.jpg`, `IMG_20260402_134303487.jpg`, `IMG_20260402_134907425.jpg`, `IMG_20260402_143731122.jpg`, `IMG_20260402_151253041.jpg`, `IMG_20260402_151533290.jpg` |
+| Ingenious+, holding certificate | `IMG_20260507_122628337.jpg` |
+| Back for Year Two: classroom FPGA board and NanoQuant | `IMG_20261009_090325621.jpg`, `IMG_20261020_201809955.jpg` |
+
+The Copilot entry's date and personal reflections follow the owner's account and matching photo timestamps. Public search found an April 2 Toronto listing but with inconsistent schedule text, so no time, speakers or unconfirmed agenda were copied. The organizer's repository describes practical GitHub workflows, AI-assisted development and local demonstrations: https://github.com/github-dev-club/GitHub-copilot-dev-days-canada. Personal observations, startup usefulness, and NanoQuant's connection to FPGA coursework come directly from the owner. The Year Two date label now spans September–October to accommodate those updates. No other chat was consulted or private NanoQuant implementation details copied.
 
 Each entry can have an `images` collection in its JSON. Polaroids enter from the right on scroll once, retain a slight resting angle, and open in a native modal dialog with keyboard closing and focus restoration. Without JavaScript they remain ordinary image links. Reduced motion bypasses entrance animations. Mobile uses one column at 440px and below, and the journal clips animation overflow horizontally.
 
