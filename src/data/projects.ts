@@ -253,39 +253,6 @@ export const projects = [
     "profileOnly": false
   },
   {
-    "slug": "ieee-led-heart",
-    "title": "IEEE LED Heart",
-    "category": "PCB design",
-    "image": "/images/projects/ieee-led-heart/1.png",
-    "alt": "IEEE LED Heart — project overview 1",
-    "summary": "A custom heart-shaped LED PCB designed in KiCad for IEEE. This project focuses on a clean schematic, sensible footprints, and an aesthetic heart-shaped board outline with LED lighting patterns.",
-    "paragraphs": [
-      "A custom heart-shaped LED PCB designed in KiCad for IEEE. This project focuses on a clean schematic, sensible footprints, and an aesthetic heart-shaped board outline with LED lighting patterns.",
-      "The repository provides the full KiCad project files: schematic (`.kicad_sch`), PCB layout (`.kicad_pcb`), and project metadata. It serves as a learning and showcase build for PCB design workflows, from schematic capture to layout and manufacturing preparation.",
-      "Explore the KiCad files to see net organization, LED placement strategies, and board constraints. The commit history documents incremental design changes and iteration."
-    ],
-    "gallery": [
-      {
-        "src": "/images/projects/ieee-led-heart/1.png",
-        "alt": "IEEE LED Heart — project overview 1"
-      },
-      {
-        "src": "/images/projects/ieee-led-heart/2.png",
-        "alt": "IEEE LED Heart — design documentation 2"
-      },
-      {
-        "src": "/images/projects/ieee-led-heart/3.png",
-        "alt": "IEEE LED Heart — design documentation 3"
-      },
-      {
-        "src": "/images/projects/ieee-led-heart/4.png",
-        "alt": "IEEE LED Heart — design documentation 4"
-      }
-    ],
-    "repo": "https://github.com/AayanShaikh007/IEEE-LED-Heart-PCB",
-    "profileOnly": false
-  },
-  {
     "slug": "delivery-drone",
     "title": "Delivery Drone",
     "category": "Robotics",
@@ -322,6 +289,39 @@ export const projects = [
       }
     ],
     "repo": "https://github.com/AayanShaikh007/drone",
+    "profileOnly": false
+  },
+  {
+    "slug": "ieee-led-heart",
+    "title": "IEEE LED Heart",
+    "category": "PCB design",
+    "image": "/images/projects/ieee-led-heart/1.png",
+    "alt": "IEEE LED Heart — project overview 1",
+    "summary": "A custom heart-shaped LED PCB designed in KiCad for IEEE. This project focuses on a clean schematic, sensible footprints, and an aesthetic heart-shaped board outline with LED lighting patterns.",
+    "paragraphs": [
+      "A custom heart-shaped LED PCB designed in KiCad for IEEE. This project focuses on a clean schematic, sensible footprints, and an aesthetic heart-shaped board outline with LED lighting patterns.",
+      "The repository provides the full KiCad project files: schematic (`.kicad_sch`), PCB layout (`.kicad_pcb`), and project metadata. It serves as a learning and showcase build for PCB design workflows, from schematic capture to layout and manufacturing preparation.",
+      "Explore the KiCad files to see net organization, LED placement strategies, and board constraints. The commit history documents incremental design changes and iteration."
+    ],
+    "gallery": [
+      {
+        "src": "/images/projects/ieee-led-heart/1.png",
+        "alt": "IEEE LED Heart — project overview 1"
+      },
+      {
+        "src": "/images/projects/ieee-led-heart/2.png",
+        "alt": "IEEE LED Heart — design documentation 2"
+      },
+      {
+        "src": "/images/projects/ieee-led-heart/3.png",
+        "alt": "IEEE LED Heart — design documentation 3"
+      },
+      {
+        "src": "/images/projects/ieee-led-heart/4.png",
+        "alt": "IEEE LED Heart — design documentation 4"
+      }
+    ],
+    "repo": "https://github.com/AayanShaikh007/IEEE-LED-Heart-PCB",
     "profileOnly": false
   },
   {
