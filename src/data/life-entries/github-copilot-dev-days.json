@@ -1,0 +1,15 @@
+{
+  "slug": "github-copilot-dev-days",
+  "date": "2026-04-02",
+  "sortDate": "2026-04-02",
+  "dateLabel": "April 2, 2026",
+  "location": "Toronto, Ontario",
+  "title": "An Afternoon at GitHub Copilot Dev Days",
+  "subtitle": "Microsoft Toronto · GitHub Copilot Dev Days",
+  "paragraphs": [
+    "I attended GitHub Copilot Dev Days at Microsoft’s Toronto office. Most attendees were working professionals, and I was one of a small number of students there.",
+    "That made it a useful change from university events. Being in the office and hearing how people worked gave me a glimpse of what a regular commute and working life at a larger company might look like.",
+    "As a student, it’s easy to feel overwhelmed by the pace of new tools. Seeing them demonstrated in a professional setting helped put things in perspective: what people were actually using, what the tools could do, and where I could start learning.",
+    "I learned more about AI agents and orchestration in VS Code, which I later found useful in my work at the stealth startup. It was a small event, but a worthwhile introduction to professional development outside the classroom."
+  ]
+}
