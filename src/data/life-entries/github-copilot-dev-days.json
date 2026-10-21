@@ -11,5 +11,49 @@
     "That made it a useful change from university events. Being in the office and hearing how people worked gave me a glimpse of what a regular commute and working life at a larger company might look like.",
     "As a student, it’s easy to feel overwhelmed by the pace of new tools. Seeing them demonstrated in a professional setting helped put things in perspective: what people were actually using, what the tools could do, and where I could start learning.",
     "I learned more about AI agents and orchestration in VS Code, which I later found useful in my work at the stealth startup. It was a small event, but a worthwhile introduction to professional development outside the classroom."
+  ],
+  "images": [
+    {
+      "src": "/images/life/github-copilot-dev-days/dev-days-session.webp",
+      "alt": "Attendees watching a GitHub Copilot Dev Days presentation",
+      "caption": "GitHub Copilot Dev Days · April 2, 2026",
+      "width": 1600,
+      "height": 722
+    },
+    {
+      "src": "/images/life/github-copilot-dev-days/agent-session.webp",
+      "alt": "Presentation slide about Agent Package Manager during Dev Days",
+      "caption": "Learning about agent workflows",
+      "width": 1600,
+      "height": 725
+    },
+    {
+      "src": "/images/life/github-copilot-dev-days/microsoft-window.webp",
+      "alt": "Microsoft logo on a window overlooking Toronto",
+      "caption": "Microsoft Toronto",
+      "width": 1600,
+      "height": 720
+    },
+    {
+      "src": "/images/life/github-copilot-dev-days/office-lobby.webp",
+      "alt": "Microsoft office lobby with a large display",
+      "caption": "Around the office",
+      "width": 1600,
+      "height": 720
+    },
+    {
+      "src": "/images/life/github-copilot-dev-days/canada-book.webp",
+      "alt": "Book titled The World Needs More Canada on a table beside a coffee cup",
+      "caption": "The World Needs More Canada",
+      "width": 722,
+      "height": 1600
+    },
+    {
+      "src": "/images/life/github-copilot-dev-days/office-display.webp",
+      "alt": "Display beside windows inside the Microsoft office",
+      "caption": "Inside Microsoft Toronto",
+      "width": 722,
+      "height": 1600
+    }
   ]
 }
