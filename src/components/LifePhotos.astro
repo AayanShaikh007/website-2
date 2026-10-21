@@ -1,0 +1,8 @@
+---
+import type {LifePhoto} from '../data/life';
+interface Props {photos: LifePhoto[]; title: string}
+const {photos,title}=Astro.props;
+---
+<div class="life-polaroids" role="group" aria-label={`${title} photographs`}>
+ {photos.map((photo,index)=><div class="life-photo-flight" data-journal-photo><a class="life-polaroid" href={photo.src} data-life-photo data-caption={photo.caption??photo.alt} style={`--photo-angle:${[-4,3,-2,4,-3,2][index%6]}deg`} aria-label={`Enlarge photo: ${photo.alt}`}><img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" width={photo.width} height={photo.height}/><span class="life-photo-caption">{photo.caption??photo.alt}</span></a></div>)}
+</div>

@@ -9,6 +9,7 @@ import undercity from './life-entries/undercity.json';
 import uottahack from './life-entries/uottahack.json';
 import yearTwo from './life-entries/year-two.json';
 
+export interface LifePhoto {src: string; alt: string; caption?: string; width?: number; height?: number}
 export interface LifeEntry {
  slug: string;
  date: string;
@@ -20,6 +21,7 @@ export interface LifeEntry {
  subtitle: string;
  paragraphs: string[];
  image?: {src: string; alt: string; caption?: string};
+ images?: LifePhoto[];
 }
 const entries: LifeEntry[] = [firstYear,guelph,htn2025,htnVolunteer,ingenious,oec,summer,undercity,uottahack,yearTwo];
 export const lifeYears = [...new Set(entries.map(entry=>Number(entry.sortDate.slice(0,4))))]
