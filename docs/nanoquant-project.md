@@ -16,6 +16,6 @@ Reviewed README, docs/validation.md, docs/dashboard.md, docs/hardware.md, docs/p
 
 - Hardware photo: owner's previously supplied `IMG_20261020_201809955.jpg`, reused from the Life image.
 - Client screenshots: actual isolated clone on loopback ports 5174/8001, Python engine, generated prices, 20 quotes/sec. Stopped before captures; marker selected through UI. Paper P&L visible in screenshots is synthetic simulation output, not evidence of attainable returns. No credentials or physical hardware commands used. The original project checkout was not modified.
-- GIF: owner's `VID_20261021_002934427.mp4`, seconds 1–5.8, 640×360, 10 fps, 96-colour palette, 3,509,261 bytes. Audio and source metadata omitted. Verified 48 frames / 4.8 seconds, no repeat extension (one playback). The gallery provides a static source for prefers-reduced-motion and an image link to reopen the GIF.
+- GIF: owner's `VID_20261021_002934427.mp4`, seconds 1–5.8, 640×360, 10 fps, 96-colour palette, 3,509,280 bytes. Audio and source metadata omitted. Verified 48 frames / 4.8 seconds, infinite repeat extension (loop=0). The gallery provides a static source for prefers-reduced-motion and an image link to view the GIF full size.
 
 Validation: Astro diagnostics and production build; asset/route checks and browser inspection. No physical FPGA validation was repeated. Temporary screenshot services are shut down after use.

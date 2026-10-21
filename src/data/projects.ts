@@ -35,7 +35,7 @@ export const projects = [
         "src": "/images/projects/nanoquant/hardware-demo.gif",
         "poster": "/images/projects/nanoquant/hardware-demo-poster.webp",
         "alt": "Short clip of the Tang Nano 9K board with active indicator LEDs",
-        "caption": "Physical board demo · 4.8-second GIF, plays once; open to replay"
+        "caption": "Physical board demo · 4.8-second GIF, looping"
       }
     ],
     "repo": "https://github.com/AayanShaikh007/fpga_stockmarketsimulation",
