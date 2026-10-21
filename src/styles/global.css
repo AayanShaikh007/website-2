@@ -33,3 +33,5 @@
 
 
 @media(max-width:600px){.nav{height:auto;min-height:96px;flex-wrap:wrap;align-content:center;row-gap:2px;padding-block:10px}.nav>.brand{flex-basis:100%}.nav>nav[aria-label="Main navigation"]{gap:20px;flex-wrap:wrap}.nav>nav[aria-label="Main navigation"] a{white-space:nowrap}}
+
+.text-section.about-life{margin-top:38px;padding-top:30px;border-top:1px solid var(--line)}
