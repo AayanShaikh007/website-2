@@ -110,23 +110,31 @@ export const projects = [
     "slug": "alertcore",
     "title": "AlertCore",
     "category": "IoT",
-    "image": "/images/projects/alertcore/1.jpg",
-    "alt": "AlertCore — project overview 1",
-    "summary": "AlertCore is an IoT-based industrial monitoring system designed to provide real-time awareness of equipment and workspace conditions. The system combines custom mechanical hardware, sensors, computer vision, and cellular connectivity into a compact field-deployable device.",
+    "image": "/images/projects/alertcore/device-lineup.webp",
+    "alt": "AlertCore device lineup with custom black and white enclosures",
+    "summary": "A series of four industrial monitoring devices, each featuring different technologies across sensing, computer vision, and connectivity.",
     "paragraphs": [
-      "AlertCore is an IoT-based industrial monitoring system designed to provide real-time awareness of equipment and workspace conditions. The system combines custom mechanical hardware, sensors, computer vision, and cellular connectivity into a compact field-deployable device.",
-      "As Hardware Engineering Lead, I designed and iterated custom enclosures and mechanical components in Fusion 360, developed prototypes through FDM 3D printing, and integrated LiDAR, camera, cellular, and embedded electronics. I also selected PETG-CF to improve prototype strength and durability, upgraded printer hardware to support composite filament, and troubleshot manufacturing issues through iterative testing and optimization.",
-      "The project combines mechanical design, rapid prototyping, embedded systems, and IoT connectivity to create a practical hardware solution for industrial environments.",
-      "Key Achievements: - Designed and iterated custom 3D-printed enclosures and components for industrial applications in Fusion 360 - Prototyped and refined hardware through FDM 3D printing, assembly, and iterative fit/function testing - Selected PETG-CF over standard PETG to improve mechanical strength and durability, and upgraded printer hardware with a hardened extruder/nozzle to support abrasive composite filament"
+      "AlertCore is a series of four industrial monitoring devices. Each device features different technologies, exploring distinct combinations of sensing, computer vision, embedded electronics, and connectivity to monitor equipment and workspace conditions.",
+      "As Hardware Engineering Lead, I designed and iterated custom enclosures and mechanical components in Fusion 360, developed prototypes through FDM 3D printing, and integrated LiDAR, camera, cellular, and embedded electronics across the series.",
+      "I selected PETG-CF for prototype strength and durability, upgraded printer hardware with a hardened extruder and nozzle to support the abrasive composite filament, and refined the designs through assembly and fit/function testing."
     ],
     "gallery": [
       {
-        "src": "/images/projects/alertcore/1.jpg",
-        "alt": "AlertCore — project overview 1"
+        "src": "/images/projects/alertcore/device-lineup.webp",
+        "alt": "Three AlertCore devices shown together in black and white custom enclosures",
+        "caption": "Three devices from the four-device AlertCore series"
+      },
+      {
+        "src": "/images/projects/alertcore/device-detail.webp",
+        "alt": "Black AlertCore enclosure with camera, buttons, and status indicator"
       },
       {
         "src": "/images/projects/alertcore/2.jpg",
-        "alt": "AlertCore — project detail 2"
+        "alt": "AlertCore enclosure during prototyping and assembly"
+      },
+      {
+        "src": "/images/projects/alertcore/1.jpg",
+        "alt": "Original AlertCore prototype lineup on the workbench"
       }
     ],
     "repo": "https://github.com/AayanShaikh007",
