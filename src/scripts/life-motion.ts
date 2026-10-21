@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 const journal=document.querySelector<HTMLElement>('.life-journal');
 if(journal){
  const motion=gsap.matchMedia();
- motion.add('(prefers-reduced-motion: no-preference)',()=>{
+ if(document.documentElement.dataset.motion!=='low') motion.add('(min-width: 0px)',()=>{
   gsap.utils.toArray<HTMLElement>('.life-entries').forEach(group=>{
    const progress=group.querySelector<HTMLElement>('.journal-progress');
    if(progress)gsap.fromTo(progress,{scaleY:0},{scaleY:1,ease:'none',scrollTrigger:{trigger:group,start:'top 65%',end:'bottom 65%',scrub:.35,invalidateOnRefresh:true}});

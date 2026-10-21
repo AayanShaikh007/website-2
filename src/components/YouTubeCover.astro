@@ -30,12 +30,12 @@ if(cover){
  button?.addEventListener('click',load);
  const observer=new IntersectionObserver(entries=>{
   const visible=entries.some(entry=>entry.isIntersecting);
-  if(visible&&!reduced.matches)load();
+  if(visible&&document.documentElement.dataset.motion!=='low')load();
   if(!visible)frame?.contentWindow?.postMessage(JSON.stringify({event:'command',func:'pauseVideo',args:[]}), 'https://www.youtube-nocookie.com');
  },{threshold:.3});
  observer.observe(cover);
  reduced.addEventListener('change',()=>{
-  if(reduced.matches&&frame){frame.remove();frame=undefined;if(button)button.hidden=false;}
+  if(document.documentElement.dataset.motion==='low'&&frame){frame.remove();frame=undefined;if(button)button.hidden=false;}
  });
 }
 </script>

@@ -24,14 +24,21 @@ const sections=[['projects','Work'],['about','About'],['experience','Experience'
 <meta name="twitter:description" content={description}/>
 <meta name="twitter:image" content={socialImage}/>
 <meta name="twitter:image:alt" content={socialImageAlt}/>
-</head><body><a class="skip" href="#main">Skip to content</a><header class:list={["nav", {"home-nav":isHome}]}><a class="brand" href="/">Aayan Shaikh</a><nav aria-label="Main navigation"><a href="/#projects">Work</a><a href="/#about">About</a><a href="/#experience">Experience</a><a href="/life/">Life</a><a href="/resume/">Resume</a></nav>{isHome && <nav class="reading-track" aria-label="Homepage sections"><span class="reading-fill" aria-hidden="true"></span>{sections.map(([id,label])=><a href={`/#${id}`} data-progress-section={id} aria-label={`Jump to ${label}`} title={label}><span aria-hidden="true"></span></a>)}</nav>}</header><main id="main"><slot/></main><footer class="footer"><div><p>Computer Engineering<br/>University of Guelph</p><span>© {new Date().getFullYear()} Aayan Shaikh</span></div><div class="footer-links"><a href="https://www.linkedin.com/in/as770/">LinkedIn</a><a href="https://github.com/AayanShaikh007">GitHub</a><a href="mailto:ashaik28@uoguelph.ca">Email</a></div><div class="footer-links"><a href="/#about">About</a><a href="/#projects">Work</a><a href="/#experience">Experience</a><a href="/life/">Life</a><a href="/resume/">Resume</a></div></footer>
+<script is:inline>
+(() => {
+ const root=document.documentElement;
+ try { root.dataset.theme=localStorage.getItem('portfolio-theme') || (matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'); root.dataset.motion=localStorage.getItem('portfolio-motion') || (matchMedia('(prefers-reduced-motion: reduce)').matches?'low':'full'); }
+ catch { root.dataset.theme=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'; root.dataset.motion=matchMedia('(prefers-reduced-motion: reduce)').matches?'low':'full'; }
+})();
+</script></head><body><a class="skip" href="#main">Skip to content</a><header class:list={["nav", {"home-nav":isHome}]}><a class="brand" href="/">Aayan Shaikh</a><nav aria-label="Main navigation"><a href="/#projects">Work</a><a href="/#about">About</a><a href="/#experience">Experience</a><a href="/life/">Life</a><a href="/resume/">Resume</a></nav><div class="display-controls" role="group" aria-label="Display preferences"><button type="button" id="theme-toggle" aria-label="Use light theme" title="Use light theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button><button type="button" id="motion-toggle" aria-label="Reduce motion" title="Reduce motion" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg></button></div>{isHome && <nav class="reading-track" aria-label="Homepage sections"><span class="reading-fill" aria-hidden="true"></span>{sections.map(([id,label])=><a href={`/#${id}`} data-progress-section={id} aria-label={`Jump to ${label}`} title={label}><span aria-hidden="true"></span></a>)}</nav>}</header><main id="main"><slot/></main><footer class="footer"><div><p>Computer Engineering<br/>University of Guelph</p><span>© {new Date().getFullYear()} Aayan Shaikh</span></div><div class="footer-links"><a href="https://www.linkedin.com/in/as770/">LinkedIn</a><a href="https://github.com/AayanShaikh007">GitHub</a><a href="mailto:ashaik28@uoguelph.ca">Email</a></div><div class="footer-links"><a href="/#about">About</a><a href="/#projects">Work</a><a href="/#experience">Experience</a><a href="/life/">Life</a><a href="/resume/">Resume</a></div></footer>
 <script>
+import '../scripts/preferences';
 import '../scripts/home-progress';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 const mm=gsap.matchMedia();
-mm.add('(prefers-reduced-motion: no-preference)',()=>{
+if(document.documentElement.dataset.motion!=='low') mm.add('(min-width: 0px)',()=>{
  // Keep the original text accessible while only its visual copy streams in.
  const originals: {element: HTMLElement; html: string}[] = [];
  const characters: HTMLElement[] = [];
@@ -62,7 +69,7 @@ mm.add('(prefers-reduced-motion: no-preference)',()=>{
  return () => originals.forEach(({element,html}) => { element.innerHTML = html; });
 });
 // Throw the photos from the header; power4.out gives a quick launch and long friction-like stop.
-mm.add('(prefers-reduced-motion: no-preference)',()=>{
+if(document.documentElement.dataset.motion!=='low') mm.add('(min-width: 0px)',()=>{
  const brand=document.querySelector<HTMLElement>('.brand');
  if(!brand)return;
  const origin=brand.getBoundingClientRect();
@@ -94,7 +101,7 @@ if(showMore&&projectCards.length){
   visibleCount=Math.min(projectCards.length,visibleCount+(mobile.matches?4:8));
   updateCards();
   const added=projectCards.slice(previous,visibleCount);
-  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  if(document.documentElement.dataset.motion!=='low'){
    gsap.fromTo(added,{opacity:0,y:18},{opacity:1,y:0,duration:.65,stagger:.07,ease:'power2.out',clearProps:'all',onComplete:()=>ScrollTrigger.refresh()});
   }
   // Keep focus in the newly revealed work when the final button disappears.
