@@ -10,7 +10,7 @@ const {project:p,next}=Astro.props;
 <Layout title={`${p.title} — Aayan Shaikh`} description={p.summary}>
 <article class="case-study wrap">
 <a class="text-link" href="/#projects">← All projects</a>
-<header class="project-header"><p class="muted">{p.category}</p><h1>{p.title}</h1><p class="case-intro">{p.summary}</p><a class="button github-button" href={p.repo} target="_blank" rel="noopener noreferrer">{p.profileOnly?'GitHub profile ↗':'View on GitHub ↗'}</a>{p.profileOnly&&<p class="repo-note">Project repository not publicly linked.</p>}{'source' in p && <a class="text-link project-source" href={p.source} target="_blank" rel="noopener noreferrer">Project source ↗</a>}</header>
+<header class="project-header"><p class="muted">{p.category}</p><h1>{p.title}</h1><p class="case-intro">{p.summary}</p><a class="button github-button" href={p.repo} target="_blank" rel="noopener noreferrer">{p.profileOnly?'GitHub profile ↗':'View on GitHub ↗'}</a>{p.profileOnly&&<p class="repo-note">Project repository not publicly linked.</p>}{'source' in p && <a class="text-link project-source" href={p.source} target="_blank" rel="noopener noreferrer">{p.slug==='nanoquant'?'Validation notes ↗':'Project source ↗'}</a>}</header>
 {p.slug==='karen' && <YouTubeCover poster={p.image} alt={p.alt}/>}
 {p.gallery.length>0 && p.slug!=='karen' && <figure class="case-image"><a href={p.gallery[0].src} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size ${p.title} overview`}><img src={p.gallery[0].src} alt={p.gallery[0].alt} width="1200" height="800" fetchpriority="high"/></a></figure>}
 {p.gallery.length===0 && <p class="project-image-pending muted">Project photographs and screenshots will be added here.</p>}
