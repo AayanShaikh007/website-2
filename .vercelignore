@@ -1,4 +1,5 @@
 work/
+private-security/
 node_modules/
 dist/
 .astro/

@@ -4,6 +4,7 @@ dist/
 .astro/
 
 work/
+private-security/
 .env
 .env.*
 !.env.example
