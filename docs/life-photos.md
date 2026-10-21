@@ -25,3 +25,6 @@ The Copilot entry's date and personal reflections follow the owner's account and
 Each entry can have an `images` collection in its JSON. Polaroids enter from the right on scroll once, retain a slight resting angle, and open in a native modal dialog with keyboard closing and focus restoration. Without JavaScript they remain ordinary image links. Reduced motion bypasses entrance animations. Mobile uses one column at 440px and below, and the journal clips animation overflow horizontally.
 
 Verified: Astro check (zero diagnostics), production build, ten linked photos, modal open/Escape/focus restoration, and 390px mobile viewport without horizontal document overflow. No new personal claims or dates were added.
+
+Owner revision: removed the agent-session, Canada book, and office-display polaroids from Copilot Dev Days and from published assets. The entry now has three photos; the journal has 17 in total. Original source photos remain in the owner's Downloads folder.
+
