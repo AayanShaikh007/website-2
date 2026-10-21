@@ -10,5 +10,28 @@
     "After winning at Guelph, our team brought H₂@Home to the Ontario Engineering Competition alongside engineering students from across the province.",
     "Presenting at a larger competition pushed us to look more closely at our design decisions, explain our technical approach, and think about how the idea could work beyond a prototype.",
     "It was also a chance to meet other student engineers and see the range of ideas being developed across Ontario."
+  ],
+  "images": [
+    {
+      "src": "/images/life/ontario-engineering-competition/team-dinner.webp",
+      "alt": "Three attendees seated at the Ontario Engineering Competition banquet",
+      "caption": "OEC 2026",
+      "width": 1600,
+      "height": 722
+    },
+    {
+      "src": "/images/life/ontario-engineering-competition/winter-campus.webp",
+      "alt": "Snow-covered campus buildings beside a river",
+      "caption": "Ottawa · January 2026",
+      "width": 1600,
+      "height": 722
+    },
+    {
+      "src": "/images/life/ontario-engineering-competition/ottawa-dusk.webp",
+      "alt": "City buildings and a river at dusk in Ottawa",
+      "caption": "Ottawa at dusk",
+      "width": 1600,
+      "height": 722
+    }
   ]
 }
