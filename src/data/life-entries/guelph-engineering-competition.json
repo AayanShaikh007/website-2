@@ -10,5 +10,14 @@
     "A few friends and I entered the Guelph Engineering Competition with H₂@Home, a concept for making hydrogen refuelling more accessible through a residential system.",
     "We worked on the hardware, control system, and how to explain the idea to the judges. Bringing those parts together was as much a communication exercise as a technical one.",
     "We took first place in Innovative Design and qualified for the Ontario Engineering Competition. I enjoyed turning an ambitious idea into something we could demonstrate as a team."
+  ],
+  "images": [
+    {
+      "src": "/images/life/guelph-engineering-competition/hydrogen-prototype.webp",
+      "alt": "H₂@Home prototype with containers, tubing, wiring and control electronics",
+      "caption": "H₂@Home prototype",
+      "width": 1170,
+      "height": 878
+    }
   ]
 }
