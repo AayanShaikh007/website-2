@@ -8,7 +8,7 @@ npm install
 npm run dev
 ```
 
-Visit http://127.0.0.1:4321. `npm run check` checks Astro and TypeScript; `npm run build` generates `dist/`; `npm run preview` serves the production output.
+Visit http://aayanshaikh.dev  `npm run check` checks Astro and TypeScript; `npm run build` generates `dist/`; `npm run preview` serves the production output.
 
 ## Content
 
