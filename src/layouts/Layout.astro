@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
 interface Props { title?: string; description?: string }
 const {title='Aayan Shaikh — Computer Engineering',description='Computer Engineering student at the University of Guelph. Embedded systems, custom hardware, and software.'}=Astro.props;
 const isHome=Astro.url.pathname==='/';
@@ -110,5 +111,5 @@ if(showMore&&projectCards.length){
   if(status)status.textContent=visibleCount+' of '+projectCards.length+' projects shown.';
  });
 }
-</script></body></html>
+</script><Analytics /></body></html>
 
