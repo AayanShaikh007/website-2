@@ -43,6 +43,55 @@ export const projects = [
     "profileOnly": false
   },
   {
+    "slug": "triptally",
+    "title": "TripTally",
+    "category": "Android · Java",
+    "image": "/images/projects/triptally/comparison.webp",
+    "alt": "TripTally Android app comparing fuel costs for two vehicles using demonstration data",
+    "summary": "An Android app that turns shared Google Maps directions into fuel-cost estimates for your saved cars, with a categorized drive log.",
+    "paragraphs": [
+      "An Android app that turns shared Google Maps directions into fuel-cost estimates for your saved cars, with a categorized drive log.",
+      "I built TripTally around a simple question: when Maps shows a distance, what does that mean in gas money? Share driving directions from Google Maps, compare the estimated fuel bill for two saved vehicles, and log the drive by car and category.",
+      "A Java Android activity handles shared routes, permissions, and network lookups. An HTML, CSS, and JavaScript interface runs in WebView, connected through a native JavaScript bridge. An offline EPA vehicle catalog and custom consumption entries support vehicle setup; fuel prices can come from regional averages or a manually entered pump price.",
+      "Round-trip mode and an adjustable budget margin help compare costs before a drive. Vehicle profiles, preferences, and logged trips stay in local WebView storage. Lifetime totals and filters organize the saved estimates by vehicle, date, and category, with CAD and USD totals kept separate.",
+      "This is a prototype: routed distances may differ from the route selected in Google Maps, and regional fuel averages are not live station prices. Drives are logged manually; there is no account system or cloud sync. The screenshots were captured on an Android emulator with demonstration trip and price data."
+    ],
+    "repo": "https://github.com/AayanShaikh007",
+    "profileOnly": true,
+    "gallery": [
+      {
+        "src": "/images/projects/triptally/comparison.webp",
+        "alt": "Fuel-cost comparison for a demonstration Waterloo to Toronto drive",
+        "caption": "Drive estimate · emulator, demonstration data"
+      },
+      {
+        "src": "/images/projects/triptally/lifetime.webp",
+        "alt": "TripTally lifetime totals and saved vehicle history",
+        "caption": "Lifetime totals"
+      },
+      {
+        "src": "/images/projects/triptally/history.webp",
+        "alt": "Expanded example drive showing category and saved fuel estimate",
+        "caption": "Drive history · demonstration data"
+      },
+      {
+        "src": "/images/projects/triptally/garage.webp",
+        "alt": "Saved vehicle and manual fuel-price settings",
+        "caption": "Garage and vehicle settings"
+      },
+      {
+        "src": "/images/projects/triptally/settings.webp",
+        "alt": "TripTally currency, round-trip and budget-margin settings",
+        "caption": "Trip preferences"
+      },
+      {
+        "src": "/images/projects/triptally/onboarding.webp",
+        "alt": "TripTally introduction explaining route sharing and fuel estimates",
+        "caption": "Getting started"
+      }
+    ]
+  },
+  {
     "slug": "karen",
     "title": "K.A.R.E.N",
     "category": "FPGA · AI",
