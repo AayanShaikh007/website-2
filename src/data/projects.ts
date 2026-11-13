@@ -1,6 +1,24 @@
 // Project descriptions: old portfolio, Devpost, and linked repositories.
 export const projects = [
   {
+    "slug": "gryphplan",
+    "title": "GryphPlan",
+    "category": "Full-stack · TypeScript",
+    "image": "/images/projects/gryphplan/cover.svg",
+    "alt": "GryphPlan course planner project cover",
+    "summary": "A Guelph course planner that turns course PDFs into ranked timetable options.",
+    "paragraphs": [
+      "A Guelph course planner that turns course PDFs into ranked timetable options.",
+      "GryphPlan imports course PDFs using text extraction and browser-based OCR for scanned pages. An import review pairs the source PDF with editable meeting records before planning a timetable.",
+      "A deterministic server-side search ranks schedule options around availability, locked sections, preferred start and end times, gaps, and free days. Saved schedules support registration-code copying, calendar export, and workspace backups.",
+      "The React and TypeScript dashboard runs on Vinext, with per-user Cloudflare D1 workspaces and authenticated R2 PDF storage. Revision checks prevent conflicting browser tabs from silently overwriting newer work.",
+      "This is a planning tool: it does not register students or query live seat availability. OCR results, prerequisites, and exam dates need verification against university sources. The source repository is currently private."
+    ],
+    "repo": "https://github.com/AayanShaikh007/gryphplan",
+    "profileOnly": false,
+    "gallery": []
+  },
+  {
     "slug": "nanoquant",
     "title": "Signum",
     "category": "FPGA · Software",
