@@ -19,3 +19,10 @@ Reviewed README, docs/validation.md, docs/dashboard.md, docs/hardware.md, docs/p
 - GIF: owner's `VID_20261021_002934427.mp4`, seconds 1–5.8, 640×360, 10 fps, 96-colour palette, 3,509,280 bytes. Audio and source metadata omitted. Verified 48 frames / 4.8 seconds, infinite repeat extension (loop=0). The gallery provides a static source for prefers-reduced-motion and an image link to view the GIF full size.
 
 Validation: Astro diagnostics and production build; asset/route checks and browser inspection. No physical FPGA validation was repeated. Temporary screenshot services are shut down after use.
+
+
+## November 13 README refresh
+
+Preserved the pinned hardware photo and looping gallery GIF. Added the new README overview graphic from docs/assets/signum-overview.png, reviewed visually and optimized to WebP. The current README contains only three media assets: this new overview plus the existing hardware photo and board GIF; duplicate copies of those were not added. Existing actual client screenshots remain.
+
+Reviewed README blob 1cf2d884c6a0361898000e409c23bb7589602f7c and docs/fpga-configuration.md blob 887d542f53333b5c680a4803f0eb1bfd3026d1d6. Updated outdated case-study wording to distinguish browser demo/local workstation, paper-broker orders and the October 31 SMA16 acceptance record (65/65 matching quote replies; 66/66 including configuration; 4.2875 ms mean host RTT). No physical testing was performed during this gallery update. Original October measurements remain historical, not superseded evidence of a speedup.

@@ -11,15 +11,20 @@ export const projects = [
       "A Tang Nano 9K FPGA trading engine, Python reference model, and React research terminal. All trading is simulated.",
       "I built Signum to connect FPGA coursework with a larger software system. A Verilog engine makes buy, sell, and hold decisions under order and position limits. Validated UART packets link it to Python, checking headers, CRC, sequence numbers, and agreement with the reference engine. Hardware LEDs indicate actions, kill state, and protocol errors.",
       "A Python/FastAPI backend streams telemetry over WebSockets to a React and TypeScript client built with Tailwind CSS and Recharts. The terminal includes interactive trade markers, a $10,000 paper portfolio with fees and realized/unrealized P&L, historical replay, and engineering diagnostics. Generated prices, historical datasets, and Alpaca IEX stock data are selected independently from Python or physical FPGA execution.",
-      "The published validation notes record matching physical FPGA and Python decisions. Measured host round trips were approximately 4.2–4.7 ms, including UART transfer, USB buffering, operating-system scheduling, and host processing. These results validate the tested communication path; they do not establish isolated FPGA computation latency.",
-      "The one-cycle architecture at 27 MHz implies approximately 37 ns per engine stage. That is an architectural estimate, not a physical timing measurement or a demonstrated speedup over Python. No profitable strategy has been demonstrated. Every order and fill remains simulated; the application does not place brokerage orders.",
-      "The client screenshots below use the Python reference engine and generated demo prices. Their paper P&L is simulation output, not a performance claim. The hardware photo and short video excerpt are separate views of the physical setup."
+      "The October 31 physical acceptance record reports 65 of 65 FPGA quote responses matching Python, with 66 validated UART replies including configuration and zero recorded communication or reference errors. For this SMA16 generated-price run, mean host round-trip time was 4.2875 ms, with a 4.1977–5.1801 ms range. These measurements include USB/UART and host overhead; isolated FPGA computation latency remains unmeasured.",
+      "The one-cycle architecture at 27 MHz implies approximately 37 ns per engine stage. That is an architectural estimate, not a physical timing measurement or a demonstrated speedup over Python. All funds remain simulated: the local app supports a local paper ledger or explicitly selected Alpaca PAPER orders. No profitable strategy has been demonstrated.",
+      "The public browser demo runs independently from the physical FPGA. The local workstation also supports configurable FPGA rules, saved strategy snapshots, separate-period backtests, and Azure-assisted research using retrieved scholarly metadata. AI suggestions require review and testing. The earlier client captures below use generated demo prices; their paper P&L is not a performance claim."
     ],
     "gallery": [
       {
         "src": "/images/projects/nanoquant/hardware-photo.webp",
         "alt": "Tang Nano 9K board in front of the Signum trading terminal",
         "caption": "Physical setup · owner-supplied photograph"
+      },
+      {
+        "src": "/images/projects/nanoquant/readme-overview.webp",
+        "alt": "Signum README overview presenting the physical Tang Nano 9K and earlier dashboard",
+        "caption": "README overview · original hardware photo and earlier dashboard"
       },
       {
         "src": "/images/projects/nanoquant/client-overview.webp",
