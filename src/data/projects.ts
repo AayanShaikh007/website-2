@@ -4,19 +4,35 @@ export const projects = [
     "slug": "gryphplan",
     "title": "GryphPlan",
     "category": "Full-stack · TypeScript",
-    "image": "/images/projects/gryphplan/cover.svg",
-    "alt": "GryphPlan course planner project cover",
-    "summary": "A Guelph course planner that turns course PDFs into ranked timetable options.",
+    "image": "/images/projects/gryphplan/landing.webp",
+    "alt": "GryphPlan landing page introducing its campus-trip planner",
+    "summary": "A Guelph course planner that turns course PDFs into ranked timetables and compares campus trips, commute time, and gaps.",
     "paragraphs": [
-      "A Guelph course planner that turns course PDFs into ranked timetable options.",
+      "A Guelph course planner that turns course PDFs into ranked timetables and compares campus trips, commute time, and gaps.",
       "GryphPlan imports course PDFs using text extraction and browser-based OCR for scanned pages. An import review pairs the source PDF with editable meeting records before planning a timetable.",
-      "A deterministic server-side search ranks schedule options around availability, locked sections, preferred start and end times, gaps, and free days. Saved schedules support registration-code copying, calendar export, and workspace backups.",
-      "The React and TypeScript dashboard runs on Vinext, with per-user Cloudflare D1 workspaces and authenticated R2 PDF storage. Revision checks prevent conflicting browser tabs from silently overwriting newer work.",
-      "This is a planning tool: it does not register students or query live seat availability. OCR results, prerequisites, and exam dates need verification against university sources. The source repository is currently private."
+      "A deterministic, date-aware search ranks schedule options around availability, locked sections, preferred start and end times, gaps, and campus days. Commute comparisons show travel time alongside skipped-session overlaps. Saved schedules support registration-code copying, calendar export, and workspace backups.",
+      "The React and TypeScript dashboard uses Next.js. The sample demo runs locally in the browser with IndexedDB storage; account workspaces use Supabase Auth, Postgres, and private PDF storage. Revision checks detect conflicting saves.",
+      "This is a planning tool: it does not register students or query live seat availability. OCR results, prerequisites, and exam dates need verification against university sources. The screenshots show the built-in engineering sample semester with historical seat counts and attendance assumptions. The source repository is currently private."
     ],
     "repo": "https://github.com/AayanShaikh007/gryphplan",
     "profileOnly": false,
-    "gallery": []
+    "gallery": [
+      {
+        "src": "/images/projects/gryphplan/landing.webp",
+        "alt": "GryphPlan landing page with a commuter-focused introduction and illustrative timetable",
+        "caption": "Landing page · illustrative attendance plan"
+      },
+      {
+        "src": "/images/projects/gryphplan/planner.webp",
+        "alt": "GryphPlan weekly timetable showing ranked schedule options and lab blocks",
+        "caption": "Weekly timetable · built-in engineering sample semester"
+      },
+      {
+        "src": "/images/projects/gryphplan/commute-comparison.webp",
+        "alt": "GryphPlan comparing campus days, weekly commute time, gaps, and skipped-session overlaps",
+        "caption": "Campus-trip comparison · built-in engineering sample semester"
+      }
+    ]
   },
   {
     "slug": "nanoquant",
